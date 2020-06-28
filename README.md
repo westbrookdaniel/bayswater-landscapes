@@ -4,4 +4,4 @@
 
 Website for the [Bayswater Landcapes](bayswaterlandscapes.com.au). Built using Gatsby, Prismic, GraphQL, and React.
 
-_Have feedback? Send an email to [hello@westbrookdaniel.com](mailto:hello@westbrookdaniel.com)_
+_Want To Talk? Send an email to [hello@westbrookdaniel.com](mailto:hello@westbrookdaniel.com)_
