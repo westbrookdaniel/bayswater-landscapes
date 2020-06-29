@@ -1,21 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ReactHtmlParser from 'react-html-parser';
-import Header from '../components/Header'
 import "../../node_modules/bootstrap/dist/js/bootstrap"
+import { Helmet } from "react-helmet"
 
-const Home = ({ data: { prismicHomepage } }) => {
-  const { data } = prismicHomepage
+import Header from "../components/Header"
+import HeroHome from "../components/HeroHome"
+import AboutHome from "../components/AboutHome"
+import ServicesHome from "../components/ServicesHome"
+
+
+const Home = ({ data }) => {
+  console.log(data);
+  
   return (
     <div>
-      <Header />
-      <h1>{data.title.text}</h1>
-      {ReactHtmlParser(data.body.html)}
-      <img
-        style={{ width: "200px", display: "block" }}
-        alt={data.hero_image.alt}
-        src={data.hero_image.url}
-      />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data.site.siteMetadata.title}</title>
+      </Helmet>
+
+      <Header data={data.site} />
+      <HeroHome data={data.prismicHomepage} />
+      <AboutHome data={data.prismicHomepage} />
+      <ServicesHome data={data.prismicHomepage} />
     </div>
   )
 }
@@ -35,6 +42,11 @@ export const pageQuery = graphql`
         body {
           html
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

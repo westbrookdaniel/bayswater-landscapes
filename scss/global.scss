@@ -1,4 +1,17 @@
 // Variables
+$theme-colors: (
+  "primary": #076721,
+  "secondary": #E5721D
+);
+
+$font-family-base: serif;
 
 // All Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// Custom Styles
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
