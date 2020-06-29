@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ReactHtmlParser from 'react-html-parser';
+import Header from '../components/Header'
+import "../../node_modules/bootstrap/dist/js/bootstrap"
 
 const Home = ({ data: { prismicHomepage } }) => {
   const { data } = prismicHomepage
-
   return (
     <div>
+      <Header />
       <h1>{data.title.text}</h1>
       {ReactHtmlParser(data.body.html)}
       <img

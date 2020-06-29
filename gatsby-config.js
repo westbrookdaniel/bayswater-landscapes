@@ -17,5 +17,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
   ],
+  siteMetadata: {
+    title: `Bayswater Landscapes`,
+    description: `Bayswater Landscaping Business`,
+  },
 }
