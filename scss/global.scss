@@ -1,14 +1,35 @@
+// font import
+@font-face {
+  font-family: "MomsTypewriter";
+  src: url("../fonts/Mom.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Mom.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Mom.otf") format("opentype"),
+    /* Open Type Font */ url("../fonts/Mom.svg") format("svg"),
+    /* Legacy iOS */ url("../fonts/Mom.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/Mom.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Mom.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 // Variables
 $theme-colors: (
   "primary": #076721,
-  "secondary": #E5721D
+  "secondary": #e5721d,
 );
 
-$font-family-base: serif;
+// set fonts
+$font-family-base: "Open Sans", sans-serif;
+h1, h2, h3 {
+  font-family: "MomsTypewriter", sans-serif;
+}
+.navbar-brand {
+  font-family: "MomsTypewriter", sans-serif;
+}
 
 // All Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
-
 
 // Custom Styles
 .row {

@@ -1,4 +1,22 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: "MomsTypewriter";
+  src: url("../fonts/Mom.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Mom.eot?#iefix") format("embedded-opentype"), url("../fonts/Mom.otf") format("opentype"), url("../fonts/Mom.svg") format("svg"), url("../fonts/Mom.ttf") format("truetype"), url("../fonts/Mom.woff") format("woff"), url("../fonts/Mom.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3 {
+  font-family: "MomsTypewriter", sans-serif;
+}
+
+.navbar-brand {
+  font-family: "MomsTypewriter", sans-serif;
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -20,7 +38,7 @@
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #076721;
-  --secondary: #E5721D;
+  --secondary: #e5721d;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -55,7 +73,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2472,8 +2490,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #E5721D;
-  border-color: #E5721D;
+  background-color: #e5721d;
+  border-color: #e5721d;
 }
 .btn-secondary:hover {
   color: #fff;
@@ -2488,8 +2506,8 @@ fieldset:disabled a.btn {
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #E5721D;
-  border-color: #E5721D;
+  background-color: #e5721d;
+  border-color: #e5721d;
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
@@ -2706,25 +2724,25 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-  color: #E5721D;
-  border-color: #E5721D;
+  color: #e5721d;
+  border-color: #e5721d;
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #E5721D;
-  border-color: #E5721D;
+  background-color: #e5721d;
+  border-color: #e5721d;
 }
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
   box-shadow: 0 0 0 0.2rem rgba(229, 114, 29, 0.5);
 }
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-  color: #E5721D;
+  color: #e5721d;
   background-color: transparent;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #E5721D;
-  border-color: #E5721D;
+  background-color: #e5721d;
+  border-color: #e5721d;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(229, 114, 29, 0.5);
@@ -4675,7 +4693,7 @@ a.badge-primary:focus, a.badge-primary.focus {
 
 .badge-secondary {
   color: #fff;
-  background-color: #E5721D;
+  background-color: #e5721d;
 }
 a.badge-secondary:hover, a.badge-secondary:focus {
   color: #fff;
@@ -5527,7 +5545,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5629,7 +5647,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6027,7 +6045,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #E5721D !important;
+  background-color: #e5721d !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -6149,7 +6167,7 @@ button.bg-dark:focus {
 }
 
 .border-secondary {
-  border-color: #E5721D !important;
+  border-color: #e5721d !important;
 }
 
 .border-success {
@@ -9716,7 +9734,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #E5721D !important;
+  color: #e5721d !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
