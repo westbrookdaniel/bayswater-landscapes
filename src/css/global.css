@@ -9932,4 +9932,14 @@ h3 {
   margin-left: 0 !important;
 }
 
+.card-title {
+  font-weight: bold;
+}
+
+.blcustom-projects-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2em;
+}
+
 /*# sourceMappingURL=global.css.map */
