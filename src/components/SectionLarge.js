@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "./elements/Image"
 
 export default function SectionLarge(props) {
   let { data, button, right } = props
@@ -6,11 +7,11 @@ export default function SectionLarge(props) {
   let colStyle
   let colStyle2
   if (right) {
-    colStyle = "col-12 col-lg-6 p-0 order-last"
-    colStyle2 = "col-12 col-lg-5 mr-md-auto text-left px-5 py-5 ml-md-5 w-100"
-  } else {
     colStyle = "col-12 col-lg-6 p-0"
     colStyle2 = "col-12 col-lg-5 ml-md-auto text-left px-5 py-5 mr-md-5 w-100"
+  } else {
+    colStyle = "col-12 col-lg-6 p-0 order-last"
+    colStyle2 = "col-12 col-lg-5 mr-md-auto text-left px-5 py-5 ml-md-5 w-100"
   }
 
   return (
@@ -18,11 +19,10 @@ export default function SectionLarge(props) {
       <div className="container p-0 m-0" style={{ maxWidth: "none" }}>
         <div className="row align-items-center  w-100">
           <div className={colStyle}>
-            <img
-              alt="image"
-              className="img-fluid"
-              style={{ backgroundColor: "grey" }}
+            <Image
+              alt="large image"
               src={data.data.hero_image.url}
+              style={{ backgroundColor: "grey" }}
             />
           </div>
           <div className={colStyle2}>

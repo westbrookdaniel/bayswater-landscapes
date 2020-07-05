@@ -22,7 +22,8 @@ const Home = ({ data }) => {
       <Header data={data.site} />
       <Hero data={data.prismicHomepage} button />
       <SectionStandard data={data.prismicHomepage} features />
-      <SectionLarge data={data.prismicHomepage} button />
+      <SectionLarge data={data.prismicHomepage} button right/>
+      <SectionStandard data={data.prismicHomepage} button projects />
     </div>
   )
 }

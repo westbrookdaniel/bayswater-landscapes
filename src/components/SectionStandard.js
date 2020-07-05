@@ -1,7 +1,9 @@
 import React from "react"
+import Image from "./elements/image"
+import ProjectsOverview from "./elements/ProjectsOverview"
 
 function SectionStandard(props) {
-  let { data, features, button, right } = props
+  let { data, features, button, right, projects } = props
 
   let colStyle
   let colStyle2
@@ -53,11 +55,11 @@ function SectionStandard(props) {
           </div>
 
           <div className={colStyle2}>
-            <img
-              alt="image"
-              className="img-fluid"
-              src={data.data.hero_image.url}
-            />
+            {projects ? (
+              <ProjectsOverview/>
+            ) : (
+              <Image alt="example" src={data.data.hero_image.url} />
+            )}
           </div>
         </div>
       </div>
