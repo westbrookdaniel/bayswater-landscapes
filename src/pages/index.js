@@ -4,9 +4,9 @@ import "../../node_modules/bootstrap/dist/js/bootstrap"
 import { Helmet } from "react-helmet"
 
 import Header from "../components/Header"
-import HeroHome from "../components/HeroHome"
-import AboutHome from "../components/AboutHome"
-import ServicesHome from "../components/ServicesHome"
+import Hero from "../components/Hero"
+import SectionStandard from "../components/SectionStandard"
+import SectionLarge from "../components/SectionLarge"
 
 
 const Home = ({ data }) => {
@@ -20,9 +20,9 @@ const Home = ({ data }) => {
       </Helmet>
 
       <Header data={data.site} />
-      <HeroHome data={data.prismicHomepage} />
-      <AboutHome data={data.prismicHomepage} />
-      <ServicesHome data={data.prismicHomepage} />
+      <Hero data={data.prismicHomepage} button />
+      <SectionStandard data={data.prismicHomepage} features />
+      <SectionLarge data={data.prismicHomepage} button />
     </div>
   )
 }

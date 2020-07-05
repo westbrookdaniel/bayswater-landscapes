@@ -1,8 +1,8 @@
 import React from "react"
+import ReactHtmlParser from "react-html-parser"
 
-class ServicesHome extends React.Component {
+class HeroHome extends React.Component {
   render() {
-          
     return (
       <section className="fdb-block">
         <div className="container p-0 m-0" style={{ maxWidth: "none" }}>
@@ -17,15 +17,13 @@ class ServicesHome extends React.Component {
             </div>
             <div className="col-12 col-lg-5 ml-md-auto text-left px-5 py-5 mr-md-5 w-100">
               <h1>{this.props.data.data.title.text}</h1>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
-              </p>
-              <a href="https://www.froala.com">
-                <button className="btn btn-primary mt-4">Download</button>
-              </a>
+              {ReactHtmlParser(this.props.data.data.body.html)}
+
+              {this.props.button ? (
+                <a href="https://www.froala.com">
+                  <button className="btn btn-primary mt-4">Download</button>
+                </a>
+              ) : null}
             </div>
           </div>
         </div>
@@ -34,4 +32,4 @@ class ServicesHome extends React.Component {
   }
 }
 
-export default ServicesHome
+export default HeroHome
