@@ -21,7 +21,9 @@ $theme-colors: (
 
 // set fonts
 $font-family-base: "Open Sans", sans-serif;
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "MomsTypewriter", sans-serif;
 }
 .navbar-brand {
@@ -30,9 +32,6 @@ h1, h2, h3 {
 
 // All Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
-
-
-
 
 // Custom Styles ========================================
 .row {
@@ -43,11 +42,17 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-
 // blcustom-projects-grid
 .blcustom-projects-grid {
   display: grid;
   grid-template-columns: auto auto;
   gap: 2em;
+  justify-items: center;
 }
 
+@media only screen and (max-width: 1400px) {
+  .blcustom-projects-grid {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+}

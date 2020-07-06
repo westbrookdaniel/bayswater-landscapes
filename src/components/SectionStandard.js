@@ -62,7 +62,6 @@ function SectionStandard(props) {
           </div>
 
           <div className={colStyle2}>
-            {/* TODO: Realign to top on proejcts */}
             {projects ? (
               <ProjectsOverview/>
             ) : (

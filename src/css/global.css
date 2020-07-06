@@ -9,7 +9,9 @@
   font-weight: normal;
   font-style: normal;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "MomsTypewriter", sans-serif;
 }
 
@@ -9940,6 +9942,14 @@ h3 {
   display: grid;
   grid-template-columns: auto auto;
   gap: 2em;
+  justify-items: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .blcustom-projects-grid {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */
