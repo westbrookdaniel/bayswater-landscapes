@@ -35,3 +35,5 @@ export default function ProjectsOverview(props) {
     </div>
   )
 }
+
+// TODO: repsonsive fixes

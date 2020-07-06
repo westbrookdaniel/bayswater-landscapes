@@ -3,7 +3,7 @@ import Image from "./elements/image"
 import ProjectsOverview from "./elements/ProjectsOverview"
 
 function SectionStandard(props) {
-  let { data, features, button, right, projects } = props
+  let { data, features, button, right, projects, aTop } = props
 
   let colStyle
   let colStyle2
@@ -17,10 +17,17 @@ function SectionStandard(props) {
       "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
   }
 
+  let alignStyle
+  if (aTop) {
+    alignStyle = "row align-items-top mt-5"
+  } else {
+    alignStyle = "row align-items-center my-5"
+  }
+
   return (
     <section className="fdb-block py-5">
       <div className="container">
-        <div className="row align-items-center">
+        <div className={alignStyle}>
           <div className={colStyle}>
             <h1>Design Blocks</h1>
             <p className="lead">
@@ -55,6 +62,7 @@ function SectionStandard(props) {
           </div>
 
           <div className={colStyle2}>
+            {/* TODO: Realign to top on proejcts */}
             {projects ? (
               <ProjectsOverview/>
             ) : (
