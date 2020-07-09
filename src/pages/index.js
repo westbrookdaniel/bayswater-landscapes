@@ -24,7 +24,7 @@ const Home = ({ data }) => {
       <SectionStandard data={data.prismicHomepage} features />
       <SectionLarge data={data.prismicHomepage} button right />
       <SectionStandard data={data.prismicHomepage} button projects aTop shadow/>
-      <SectionStandard data={data.prismicHomepage} right button />
+      <SectionStandard data={data.prismicHomepage} contact centerText right/>
     </div>
   )
 }
