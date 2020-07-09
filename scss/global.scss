@@ -57,31 +57,99 @@ h3 {
   }
 }
 
-.clipShadow {
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 99%,
-    97% 99%,
-    84% 100%,
-    77% 99%,
-    75% 100%,
-    61% 98%,
-    58% 99%,
-    55% 98%,
-    46% 100%,
-    34% 98%,
-    30% 100%,
-    20% 98%,
-    15% 100%,
-    0% 98%
-  );
-  background: #ffffff;
-}
-.clipShadowCont {
+.bottomClip.clipShadowCont {
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
 }
+.bottomClip {
+  .clipShadow {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 99%,
+      97% 99%,
+      84% 100%,
+      77% 99%,
+      75% 100%,
+      61% 98%,
+      58% 99%,
+      55% 98%,
+      46% 100%,
+      34% 98%,
+      30% 100%,
+      20% 98%,
+      15% 100%,
+      0% 98%
+    );
+    background: #ffffff;
+  }
+  .clipShadowChild {
+    padding-bottom: 9em;
+  }
+}
 
-.clipShadowChild {
-  padding-bottom: 6em;
+.bothClip.clipShadowCont {
+  filter: drop-shadow(0 0 13px rgba(0, 0, 0, 0.2));
+}
+.bothClip {
+  .clipShadow {
+    clip-path: polygon(
+        0 1%,
+        15% 0%, 
+        20% 2%,
+        30% 0%,
+        34% 2%,
+        46% 0%,
+        55% 2%,
+        58% 1%,
+        61% 2%,
+        75% 0%,
+        77% 1%,
+        84% 0%,
+        97% 1%,
+        100% 1%,
+        100% 99%,
+        97% 99%,
+        84% 100%,
+        77% 99%,
+        75% 100%,
+        61% 98%,
+        58% 99%,
+        55% 98%,
+        46% 100%,
+        34% 98%,
+        30% 100%,
+        20% 98%,
+        15% 100%,
+        0% 98%
+    );
+    background: #ffffff;
+  }
+}
+
+
+.heroClip.clipShadowCont {
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+}
+.heroClip {
+  .clipShadow {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 99%,
+      97% 99%,
+      84% 100%,
+      77% 99%,
+      75% 100%,
+      61% 98%,
+      58% 99%,
+      55% 98%,
+      46% 100%,
+      34% 98%,
+      30% 100%,
+      20% 98%,
+      15% 100%,
+      0% 98%
+    );
+    background: #ffffff;
+  }
 }

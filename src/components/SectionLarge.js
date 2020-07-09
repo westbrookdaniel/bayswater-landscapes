@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "./elements/Image"
+import ClipShadow from './elements/ClipShadow'
 
 export default function SectionLarge(props) {
   let { data, button, right } = props
@@ -15,32 +16,30 @@ export default function SectionLarge(props) {
   }
 
   return (
-    <section className="fdb-block">
-      <div className="container p-0 m-0" style={{ maxWidth: "none" }}>
-        <div className="row align-items-center  w-100">
-          <div className={colStyle}>
-            <Image
-              alt="large image"
-              src={data.data.hero_image.url}
-              style={{ backgroundColor: "grey" }}
-            />
-          </div>
-          <div className={colStyle2}>
-            <h1>{data.data.title.text}</h1>
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean.
-            </p>
-            {button ? (
-              <a href="#">
-                <button className="btn btn-primary mt-4">Download</button>
-              </a>
-            ) : null}
-          </div>
+    <ClipShadow mode='both' style={{ maxWidth: "none", padding: 0, margin: 0, }}>
+      <div className="row align-items-center  w-100">
+        <div className={colStyle}>
+          <Image
+            alt="large image"
+            src={data.data.hero_image.url}
+            style={{ backgroundColor: "grey" }}
+          />
+        </div>
+        <div className={colStyle2}>
+          <h1>{data.data.title.text}</h1>
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated
+            they live in Bookmarksgrove right at the coast of the Semantics, a
+            large language ocean.
+          </p>
+          {button ? (
+            <a href="#">
+              <button className="btn btn-primary mt-4">Download</button>
+            </a>
+          ) : null}
         </div>
       </div>
-    </section>
+    </ClipShadow>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "./elements/image"
 import ProjectsOverview from "./elements/ProjectsOverview"
+import ClipShadow from "./elements/ClipShadow"
 
 function SectionStandard(props) {
   let { data, features, button, right, projects, aTop, shadow } = props
@@ -24,68 +25,51 @@ function SectionStandard(props) {
     alignStyle = "row align-items-center my-5"
   }
 
-  let shadowCont
-  let shadowDiv
-  let shadowChild
-  if (shadow) {
-    shadowDiv = "clipShadow"
-    shadowCont = "fdb-block py-5 clipShadowCont"
-    shadowChild = "container clipShadowChild"
-  } else {
-    shadowDiv = ""
-    shadowCont = "fdb-block py-5"
-    shadowChild = "container"
-  }
-
   return (
-    <section className={shadowCont}>
-      <div className={shadowDiv}>
-        <div className={shadowChild}>
-          <div className={alignStyle}>
-            <div className={colStyle}>
-              <h1>Design Blocks</h1>
-              <p className="lead">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
-              </p>
+    <ClipShadow disable={!shadow}>
+      <div className={alignStyle}>
+        <div className={colStyle}>
+          <h1>Design Blocks</h1>
+          <p className="lead">
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated
+            they live in Bookmarksgrove right at the coast of the Semantics,
+            a large language ocean.
+          </p>
 
-              {features ? (
-                <div className="row pt-4 pt-xl-5">
-                  <div className="col-12 col-md-5">
-                    <h4>
-                      <strong>Feature One</strong>
-                    </h4>
-                    <p>A small river named Duden flows</p>
-                  </div>
-                  <div className="col-12 col-md-5 m-auto pt-3 pt-md-0">
-                    <h4>
-                      <strong>Feature Two</strong>
-                    </h4>
-                    <p>Separated they live in Bookmarksgrove</p>
-                  </div>
-                </div>
-              ) : null}
-
-              {button ? (
-                <a href="#">
-                  <button className="btn btn-primary mt-4">Download</button>
-                </a>
-              ) : null}
+          {features ? (
+            <div className="row pt-4 pt-xl-5">
+              <div className="col-12 col-md-5">
+                <h4>
+                  <strong>Feature One</strong>
+                </h4>
+                <p>A small river named Duden flows</p>
+              </div>
+              <div className="col-12 col-md-5 m-auto pt-3 pt-md-0">
+                <h4>
+                  <strong>Feature Two</strong>
+                </h4>
+                <p>Separated they live in Bookmarksgrove</p>
+              </div>
             </div>
+          ) : null}
 
-            <div className={colStyle2}>
-              {projects ? (
-                <ProjectsOverview />
-              ) : (
-                <Image alt="example" src={data.data.hero_image.url} />
-              )}
-            </div>
-          </div>
+          {button ? (
+            <a href="#">
+              <button className="btn btn-primary mt-4">Download</button>
+            </a>
+          ) : null}
+        </div>
+
+        <div className={colStyle2}>
+          {projects ? (
+            <ProjectsOverview />
+          ) : (
+            <Image alt="example" src={data.data.hero_image.url} />
+          )}
         </div>
       </div>
-    </section>
+    </ClipShadow>
   )
 }
 
