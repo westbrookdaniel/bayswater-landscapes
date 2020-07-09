@@ -58,7 +58,7 @@ h3 {
 }
 
 .bottomClip.clipShadowCont {
-  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 8px 3px rgba(0, 0, 0, 0.1));
 }
 
 .bottomClip .clipShadow {
@@ -87,7 +87,7 @@ h3 {
 }
 
 .bothClip.clipShadowCont {
-  filter: drop-shadow(0 0 13px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 .bothClip .clipShadow {
   clip-path: polygon(
@@ -124,7 +124,7 @@ h3 {
 }
 
 .heroClip.clipShadowCont {
-  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 8px 3px rgba(0, 0, 0, 0.1));
 }
 .heroClip .clipShadow {
   clip-path: polygon(
