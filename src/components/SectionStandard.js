@@ -42,7 +42,7 @@ const ContactInner = () => {
           <div class="col-12 px-0 col-md">
             <input type="text" class="form-control" placeholder="Name"/>
           </div>
-          <div class="col-12 px-0 col-md mt-4 mt-md-0">
+          <div class="col-12 px-0 col-md">
             <input type="text" class="form-control" placeholder="Email"/>
           </div>
         </div>
@@ -74,8 +74,8 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
   let colStyle = "col-12 col-lg-6 col-xl-5"
   let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
   if (right) {
-    colStyle = "col-12 col-lg-6 order-last"
-    colStyle2 = "col-12 col-md-8 col-lg-6 col-xl-5 m-auto ml-lg-0 mr-lg-auto pt-5 pt-lg-0"
+    colStyle = "col-12 col-lg-6 order-last pt-5 pt-lg-0"
+    colStyle2 = "col-12 col-md-8 col-lg-6 col-xl-5 m-auto ml-lg-0 mr-lg-auto"
   }
 
   let alignStyle = "row align-items-center my-5"
@@ -93,7 +93,7 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
       <div className={alignStyle}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>Design Blocks</h1>
-          <p className="lead">
+          <p>
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated
             they live in Bookmarksgrove right at the coast of the Semantics,
