@@ -5,22 +5,22 @@ import ClipShadow from "./elements/ClipShadow"
 
 
 
-const NormalInner = ({features, button}) => {
+const NormalInner = ({features, button, data}) => {
   return (
     <>
       { features ? (
         <div className="row pt-4 pt-xl-5">
           <div className="col-12 col-md-5">
             <h4>
-              <strong>Feature One</strong>
+              <strong>{data.f1}</strong>
             </h4>
-            <p>A small river named Duden flows</p>
+            <p>{data.f1c}</p>
           </div>
           <div className="col-12 col-md-5 m-auto pt-3 pt-md-0">
             <h4>
-              <strong>Feature Two</strong>
+              <strong>{data.f2}</strong>
             </h4>
-            <p>Separated they live in Bookmarksgrove</p>
+            <p>{data.f2c}</p>
           </div>
         </div>
       ) : null }
@@ -69,7 +69,7 @@ const ContactInner = () => {
 }  
 
 
-const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText}) => {
+const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText}) => {  
 
   let colStyle = "col-12 col-lg-6 col-xl-5"
   let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
@@ -92,21 +92,16 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
     <ClipShadow disable={!shadow}>
       <div className={alignStyle}>
         <div className={colStyle + ' ' + textAlign}>
-          <h1>Design Blocks</h1>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated
-            they live in Bookmarksgrove right at the coast of the Semantics,
-            a large language ocean.
-          </p>
-          {contact ? <ContactInner/> : <NormalInner features={features} button={button}/> }
+          <h1>{data.title}</h1>
+          {data.body}
+          {contact ? <ContactInner/> : <NormalInner data={data.features} features={features} button={button}/> }
         </div>
 
         <div className={colStyle2}>
           {projects ? (
             <ProjectsOverview />
           ) : (
-            <Image alt="example" src={data.data.hero_image.url} />
+            <Image alt={data.image.alt} src={data.image.src} />
           )}
         </div>
       </div>

@@ -5,53 +5,131 @@ import { Helmet } from "react-helmet"
 
 import Header from "../components/Header"
 import Hero from "../components/Hero"
-import SectionStandard from "../components/SectionStandard"
-import SectionLarge from "../components/SectionLarge"
+import homeRender from "../components/util/homeRender"
 
 
 const Home = ({ data }) => {
-  console.log(data);
-  
+
+  const siteData = data.site.siteMetadata
+
+  const homeId = data.prismicHomepage.id;  
+  const homeData = data.prismicHomepage.data; 
+
+  const content = homeData.body;  
+
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{data.site.siteMetadata.title}</title>
+        <title>{siteData.title}</title>
       </Helmet>
 
-      <Header data={data.site} />
-      <Hero data={data.prismicHomepage} button />
-      <SectionStandard data={data.prismicHomepage} features />
-      <SectionLarge data={data.prismicHomepage} button right />
-      <SectionStandard data={data.prismicHomepage} button projects aTop shadow/>
-      <SectionStandard data={data.prismicHomepage} contact centerText right/>
+      {/* <Header data={siteData} /> */}
+      {/* <Hero data={homeData} button /> */}
+
+      {content.map(slice => {
+        return homeRender(slice)
+      })}
+
     </div>
   )
 }
 
 export const pageQuery = graphql`
-  query HomePage {
-    prismicHomepage {
-      id
-      data {
-        title {
-          text
+query MyQuery {
+  prismicHomepage {
+    id
+    data {
+      body {
+        ... on PrismicHomepageBodyAbout {
+          primary {
+            about_title {
+              text
+            }
+            bottom_shadow
+            about_image {
+              alt
+              url
+            }
+            about_feature_2_body {
+              text
+            }
+            about_feature_2 {
+              text
+            }
+            about_feature_1_body {
+              text
+            }
+            about_feature_1 {
+              text
+            }
+            about_body {
+              html
+            }
+          }
+          id
         }
-        hero_image {
-          url
-          alt
+        ... on PrismicHomepageBodyContact {
+          id
+          primary {
+            contact_title {
+              text
+            }
+            contact_button {
+              text
+            }
+            contact_body {
+              html
+            }
+            bottom_shadow
+          }
         }
-        body {
-          html
+        ... on PrismicHomepageBodyProjects {
+          id
+          primary {
+            projects_title {
+              text
+            }
+            projects_body {
+              html
+            }
+            bottom_shadow
+          }
+        }
+        ... on PrismicHomepageBodyServices {
+          id
+          primary {
+            services_title {
+              text
+            }
+            services_body {
+              html
+            }
+          }
         }
       }
-    }
-    site {
-      siteMetadata {
-        title
+      hero_title {
+        text
+      }
+      hero_image {
+        url
+        alt
+      }
+      hero_button {
+        text
+      }
+      hero_body {
+        html
       }
     }
   }
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}
+
 `
 
 export default Home
