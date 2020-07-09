@@ -1,26 +1,213 @@
 {
-  "Main": {
-    "title": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
-        "label": "Title"
+  "Main" : {
+    "hero_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "Hero Title"
       }
     },
-    "body": {
-      "type": "StructuredText",
-      "config": {
-        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-        "allowTargetBlank": true,
-        "label": "Body"
+    "hero_body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "Hero Body"
       }
     },
-    "hero_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "Hero Image"
+    "hero_button" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Hero Button"
+      }
+    },
+    "hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Hero Image"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "about" : [ ],
+          "services" : [ ],
+          "projects" : [ ],
+          "contact" : [ ]
+        },
+        "choices" : {
+          "about" : {
+            "type" : "Slice",
+            "fieldset" : "About",
+            "description" : "Standard Section",
+            "icon" : "face",
+            "display" : "grid",
+            "non-repeat" : {
+              "bottom_shadow" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "Off",
+                  "placeholder_true" : "On",
+                  "default_value" : false,
+                  "label" : "Bottom Shadow"
+                }
+              },
+              "about_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "About Title"
+                }
+              },
+              "about_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "About Body"
+                }
+              },
+              "about_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "About Image"
+                }
+              },
+              "about_feature_1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "About Feature 1"
+                }
+              },
+              "about_feature_1_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "About Feature 1 Body"
+                }
+              },
+              "about_feature_2" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "About Feature 2"
+                }
+              },
+              "about_feature_2_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "About Feature 2 Body"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "services" : {
+            "type" : "Slice",
+            "fieldset" : "Services",
+            "description" : "Large Section",
+            "icon" : "build",
+            "display" : "grid",
+            "non-repeat" : {
+              "services_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Services Title"
+                }
+              },
+              "services_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Services Body"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "projects" : {
+            "type" : "Slice",
+            "fieldset" : "Projects",
+            "description" : "Standard Section",
+            "icon" : "home",
+            "display" : "grid",
+            "non-repeat" : {
+              "bottom_shadow" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "Off",
+                  "placeholder_true" : "On",
+                  "default_value" : false,
+                  "label" : "Bottom Shadow"
+                }
+              },
+              "projects_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Projects Title"
+                }
+              },
+              "projects_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Projects Body"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "contact" : {
+            "type" : "Slice",
+            "fieldset" : "Contact",
+            "description" : "Standard Section",
+            "icon" : "local_phone",
+            "display" : "grid",
+            "non-repeat" : {
+              "bottom_shadow" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "Off",
+                  "placeholder_true" : "On",
+                  "default_value" : false,
+                  "label" : "Bottom Shadow"
+                }
+              },
+              "contact_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Contact Title"
+                }
+              },
+              "contact_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Contact Body"
+                }
+              },
+              "contact_button" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Contact Button"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
       }
     }
   }
