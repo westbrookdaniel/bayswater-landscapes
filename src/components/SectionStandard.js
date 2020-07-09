@@ -2,7 +2,7 @@ import React from "react"
 import Image from "./elements/image"
 import ProjectsOverview from "./elements/ProjectsOverview"
 import ClipShadow from "./elements/ClipShadow"
-
+import ReactHtmlParser from "react-html-parser"
 
 
 const NormalInner = ({features, button, data}) => {
@@ -93,7 +93,7 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
       <div className={alignStyle}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
-          {data.body}
+          {ReactHtmlParser(data.body)}
           {contact ? <ContactInner/> : <NormalInner data={data.features} features={features} button={button}/> }
         </div>
 

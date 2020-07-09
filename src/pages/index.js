@@ -7,15 +7,21 @@ import Header from "../components/Header"
 import Hero from "../components/Hero"
 import homeRender from "../components/util/homeRender"
 
-
 const Home = ({ data }) => {
 
   const siteData = data.site.siteMetadata
-
-  const homeId = data.prismicHomepage.id;  
-  const homeData = data.prismicHomepage.data; 
-
+  const homeData = data.prismicHomepage.data;
   const content = homeData.body;  
+
+  const heroData = {
+    image: {
+      src: homeData.hero_image.url,
+      alt: homeData.hero_image.alt
+    },
+    body: homeData.hero_body.html,
+    title: homeData.hero_title.text,
+    button: homeData.hero_button.text
+  }
 
   return (
     <div>
@@ -24,8 +30,8 @@ const Home = ({ data }) => {
         <title>{siteData.title}</title>
       </Helmet>
 
-      {/* <Header data={siteData} /> */}
-      {/* <Hero data={homeData} button /> */}
+      <Header data={siteData} />
+      <Hero data={heroData} button />
 
       {content.map(slice => {
         return homeRender(slice)
@@ -36,7 +42,7 @@ const Home = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-query MyQuery {
+query HomeQuery {
   prismicHomepage {
     id
     data {
@@ -81,7 +87,10 @@ query MyQuery {
             contact_body {
               html
             }
-            bottom_shadow
+            contact_image {
+              alt
+              url
+            }
           }
         }
         ... on PrismicHomepageBodyProjects {
@@ -104,6 +113,10 @@ query MyQuery {
             }
             services_body {
               html
+            }
+            services_image {
+              alt
+              url
             }
           }
         }

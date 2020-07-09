@@ -3,32 +3,29 @@ import ReactHtmlParser from "react-html-parser"
 import Image from "./elements/Image"
 import ClipShadow from './elements/ClipShadow'
 
-class HeroHome extends React.Component {
-  render() {
-    return (
-      <ClipShadow mode="hero" contStyle={{ maxWidth: "none", padding: 0, margin: 0, }}>
+export default function Hero({ data, button }) {
+  return (
+    <ClipShadow mode="hero" contStyle={{ maxWidth: "none", padding: 0, margin: 0, }}>
         <div className="row align-items-center  w-100">
           <div className="col-12 col-lg-6 p-0">
             <Image
-              alt="hero image"
-              src={this.props.data.data.hero_image.url}
-              style={{ backgroundColor: "grey" }}
+              alt={data.image.alt}
+              src={data.image.src}
             />
           </div>
           <div className="col-12 col-lg-5 ml-md-auto text-left px-5 py-5 mr-md-5 w-100">
-            <h1>{this.props.data.data.title.text}</h1>
-            {ReactHtmlParser(this.props.data.data.body.html)}
+            <h1>{data.title}</h1>
+            {ReactHtmlParser(data.body)}
 
-            {this.props.button ? (
-              <a href="https://www.froala.com">
-                <button className="btn btn-primary mt-4">Download</button>
+            {button ? (
+              <a href="#">
+                <button className="btn btn-primary mt-4">{data.button}</button>
               </a>
             ) : null}
           </div>
         </div>
       </ClipShadow>
-    )
-  }
+  )
 }
 
-export default HeroHome
+

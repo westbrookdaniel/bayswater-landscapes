@@ -10,7 +10,7 @@ export default function Header({ data }) {
             <img
               src="./imgs/logo.png"
               height="30"
-              alt={data.siteMetadata.title}
+              alt={data.title}
             />
           </a>
 

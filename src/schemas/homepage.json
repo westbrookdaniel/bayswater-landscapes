@@ -130,6 +130,14 @@
                   "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
                   "label" : "Services Body"
                 }
+              },
+              "services_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Services Image"
+                }
               }
             },
             "repeat" : { }
@@ -174,15 +182,6 @@
             "icon" : "local_phone",
             "display" : "grid",
             "non-repeat" : {
-              "bottom_shadow" : {
-                "type" : "Boolean",
-                "config" : {
-                  "placeholder_false" : "Off",
-                  "placeholder_true" : "On",
-                  "default_value" : false,
-                  "label" : "Bottom Shadow"
-                }
-              },
               "contact_title" : {
                 "type" : "StructuredText",
                 "config" : {
@@ -202,6 +201,14 @@
                 "config" : {
                   "single" : "paragraph",
                   "label" : "Contact Button"
+                }
+              },
+              "contact_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Contact Image"
                 }
               }
             },
