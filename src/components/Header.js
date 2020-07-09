@@ -6,7 +6,7 @@ export default function Header({ data }) {
 
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
-          <a className="navbar-brand" href="https://www.froala.com">
+          <a className="navbar-brand" href="#">
             <img
               src="./imgs/logo.png"
               height="30"
@@ -29,17 +29,17 @@ export default function Header({ data }) {
           <div className="collapse navbar-collapse" id="navbarNav3">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="https://www.froala.com">
+                <a className="nav-link" href="#">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://www.froala.com">
+                <a className="nav-link" href="#">
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://www.froala.com">
+                <a className="nav-link" href="#">
                   Projects
                 </a>
               </li>
@@ -47,7 +47,7 @@ export default function Header({ data }) {
 
             <a
               className="btn btn-outline-secondary ml-md-3"
-              href="https://www.froala.com"
+              href="#"
             >
               Contact
             </a>

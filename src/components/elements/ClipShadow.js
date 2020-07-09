@@ -16,7 +16,7 @@ export default function ClipShadow({
     }
 
     // variable init
-    let sCont = "fdb-block py-5 clipShadowCont " + modeName
+    let sCont = "py-5 clipShadowCont " + modeName
     let sDiv = "clipShadow" 
     let sChild = "container clipShadowChild"
 
@@ -25,7 +25,7 @@ export default function ClipShadow({
         sChild = "clipShadowChild"
     }
     if ( mode === "hero") {
-        sCont = "fdb-block clipShadowCont " + modeName
+        sCont = "clipShadowCont " + modeName
     }
 
     return (

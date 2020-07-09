@@ -9987,5 +9987,16 @@ h3 {
     clip-path: none !important;
   }
 }
+.fbIcon {
+  height: 15px;
+}
+
+footer .nav-link {
+  color: #6c757d;
+}
+
+footer .nav-link:hover {
+  color: #343a40;
+}
 
 /*# sourceMappingURL=global.css.map */

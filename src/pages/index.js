@@ -4,6 +4,7 @@ import "../../node_modules/bootstrap/dist/js/bootstrap"
 import { Helmet } from "react-helmet"
 
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import homeRender from "../components/util/homeRender"
 
@@ -36,6 +37,8 @@ const Home = ({ data }) => {
       {content.map(slice => {
         return homeRender(slice)
       })}
+
+      <Footer data={siteData} />
 
     </div>
   )
