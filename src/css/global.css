@@ -9959,6 +9959,7 @@ h3 {
   clip-path: polygon(0 0, 100% 0, 100% 99%, 97% 99%, 84% 100%, 77% 99%, 75% 100%, 61% 98%, 58% 99%, 55% 98%, 46% 100%, 34% 98%, 30% 100%, 20% 98%, 15% 100%, 0% 98%);
   background: #ffffff;
 }
+
 .bottomClip .clipShadowChild {
   padding-bottom: 9em;
 }
@@ -9979,6 +9980,12 @@ h3 {
 .heroClip .clipShadow {
   clip-path: polygon(0 0, 100% 0, 100% 99%, 97% 99%, 84% 100%, 77% 99%, 75% 100%, 61% 98%, 58% 99%, 55% 98%, 46% 100%, 34% 98%, 30% 100%, 20% 98%, 15% 100%, 0% 98%);
   background: #ffffff;
+}
+
+@media only screen and (max-width: 900px) {
+  .clipShadow {
+    clip-path: none !important;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */
