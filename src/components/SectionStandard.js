@@ -37,30 +37,30 @@ const NormalInner = ({features, button, data}) => {
 const ContactInner = () => {
   return (
     <>
-      <form class="mt-5 text-center">
-        <div class="row" style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: "15px"}}>
-          <div class="col-12 px-0 col-md">
-            <input type="text" class="form-control" placeholder="Name"/>
+      <form className="mt-5 text-center">
+        <div className="row" style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: "15px"}}>
+          <div className="col-12 px-0 col-md">
+            <input type="text" className="form-control" placeholder="Name"/>
           </div>
-          <div class="col-12 px-0 col-md">
-            <input type="text" class="form-control" placeholder="Email"/>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col px-0">
-            <input type="email" class="form-control" placeholder="Subject"/>
+          <div className="col-12 px-0 col-md">
+            <input type="text" className="form-control" placeholder="Email"/>
           </div>
         </div>
 
-        <div class="row mt-4">
-          <div class="col px-0">
-            <textarea class="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
+        <div className="row mt-4">
+          <div className="col px-0">
+            <input type="email" className="form-control" placeholder="Subject"/>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col px-0">
-            <button type="submit" class="btn btn-secondary">Send</button>
+
+        <div className="row mt-4">
+          <div className="col px-0">
+            <textarea className="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
+          </div>
+        </div>
+        <div className="row mt-4">
+          <div className="col px-0">
+            <button type="submit" className="btn btn-secondary">Send</button>
           </div>
         </div>
       </form>    

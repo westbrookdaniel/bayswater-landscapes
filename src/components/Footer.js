@@ -42,7 +42,7 @@ export default function Footer({ data }) {
               <a href="#" className="my-2 d-flex m-auto">
                 <img
                   src="static/facebook.svg"
-                  srcset="facebook.svg"
+                  srcSet="facebook.svg"
                   alt="facebook"
                   className="fbIcon"
                 ></img>

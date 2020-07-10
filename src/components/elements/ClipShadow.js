@@ -16,25 +16,18 @@ export default function ClipShadow({
     }
 
     // variable init
-    let sCont = "py-5 clipShadowCont " + modeName
-    let sDiv = "clipShadow" 
-    let sChild = "container clipShadowChild"
+    let sDiv = "clipShadow pb-4 " + modeName 
+    let sChild = "container p-5"
 
     // alterations
     if (mode === "both" || mode === "hero") {
         sChild = "clipShadowChild"
     }
-    if ( mode === "hero") {
-        sCont = "clipShadowCont " + modeName
-    }
 
     return (
-        <section className={sCont} style={contStyle}>
-            <div className={sDiv}>
-                <div className={sChild}>
-                    {children}
-                    {console.log({div: sDiv, cont: sCont, chil: sChild})}                    
-                </div>
+        <section className={sDiv} style={contStyle}>
+            <div className={sChild}>
+                {children}
             </div>
         </section>
     )
