@@ -15,8 +15,14 @@ export default function CarouselSlide({ data, slide, active, setLoad }) {
   return (
     <div className={contClass}>
       <div className="carousel-slide-grid">
-        <img onLoad={loadHandler} className="carousel-slide-before" src="https://i.imgur.com/ZMwvAuL.jpg" />
-        <img onLoad={loadHandler} className="carousel-slide-after" src="https://i.imgur.com/ynggR15.jpg" />
+        <div className="carousel-slide-before">
+          <img onLoad={loadHandler} src="https://i.imgur.com/ZMwvAuL.jpg" />
+        </div>
+        <p className="before">Before</p>
+        <div className="carousel-slide-after">
+          <img onLoad={loadHandler} src="https://i.imgur.com/ynggR15.jpg" />
+        </div>
+        <p className="after">After</p>
       </div>
     </div>
   )

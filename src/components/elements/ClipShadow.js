@@ -22,6 +22,7 @@ export default function ClipShadow({
     // alterations
     if (mode === "both" || mode === "hero") {
         sChild = "clipShadowChild"
+        sDiv = "clipShadow " + modeName 
     }
 
     return (

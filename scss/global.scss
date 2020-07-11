@@ -21,8 +21,8 @@ $theme-colors: (
 $carousel-control-color: #333;
 $carousel-indicator-active-bg: #333;
 
-$carousel-indicator-width: 12px !default;
-$carousel-indicator-height: 12px !default;
+$carousel-indicator-width: 9px !default;
+$carousel-indicator-height: 9px !default;
 $carousel-indicator-spacer: 8px !default;
 $carousel-indicator-active-bg: $white !default;
 
@@ -95,21 +95,41 @@ footer .nav-link:hover {
   color: $dark;
 }
 
+p {
+  color: $text-muted;
+}
+
 .carousel-slide-grid {
   padding: 2em 2em 2em 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
-.carousel-slide-grid .carousel-slide-before {
-  grid-area: 1 / 1 / 3 / 3;
-  width: 100%;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-}
-.carousel-slide-grid .carousel-slide-after {
-  grid-area: 2 / 2 / 4 / 4;
-  width: 100%;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  grid-template-rows: 1fr 1fr 1fr auto;
+
+  p {
+    margin: 1em;
+    text-align: center;
+  }
+  p.before {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  p.after {
+    grid-area: 4 / 2 / 4 / 5;
+  }
+
+  .carousel-slide-before {
+    grid-area: 1 / 1 / 3 / 3;
+    img {
+      width: 100%;
+      box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);  
+    }
+  }
+  .carousel-slide-after {
+    grid-area: 2 / 2 / 4 / 4;
+    img {
+      width: 100%;
+      box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);  
+    }
+  }
 }
 
 // Custom Carousel

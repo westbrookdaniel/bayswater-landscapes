@@ -16,6 +16,10 @@ export default function Carousel({ data }) {
         if (load == 6) {
             let h = document.querySelector('.carousel-slide-grid').offsetHeight
             document.querySelector('.carousel-slider').style.height = `${h}px`
+            window.addEventListener('resize', () => {
+                let h = document.querySelector('.carousel-slide-grid').offsetHeight
+                document.querySelector('.carousel-slider').style.height = `${h}px`      
+            })
         }
     }, [load])
 
