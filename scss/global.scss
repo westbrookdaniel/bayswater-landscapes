@@ -21,6 +21,11 @@ $theme-colors: (
 $carousel-control-color: #333;
 $carousel-indicator-active-bg: #333;
 
+$carousel-indicator-width: 12px !default;
+$carousel-indicator-height: 12px !default;
+$carousel-indicator-spacer: 8px !default;
+$carousel-indicator-active-bg: $white !default;
+
 // set fonts
 $font-family-base: "Open Sans", sans-serif;
 h1,
@@ -42,6 +47,16 @@ h3 {
 }
 .card-title {
   font-weight: bold;
+}
+.carousel-indicators li {
+  border-radius: 50%;
+}
+.carousel-indicators {
+  position: relative;
+}
+.carousel {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 // blcustom-projects-grid
@@ -78,4 +93,40 @@ footer .nav-link {
 }
 footer .nav-link:hover {
   color: $dark;
+}
+
+.carousel-slide-grid {
+  padding: 2em 2em 2em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+.carousel-slide-grid .carousel-slide-before {
+  grid-area: 1 / 1 / 3 / 3;
+  width: 100%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+.carousel-slide-grid .carousel-slide-after {
+  grid-area: 2 / 2 / 4 / 4;
+  width: 100%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+// Custom Carousel
+.carousel-slide.active {
+  // display: block;
+  opacity: 1;
+}
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.carousel-slider {
+  position: relative;
+  height: fit-content;
 }

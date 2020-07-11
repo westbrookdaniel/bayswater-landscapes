@@ -4,7 +4,6 @@ import Carousel from "./elements/Carousel"
 import ClipShadow from './elements/ClipShadow'
 
 export default function Hero({ data, button }) {
-  console.log(data);
   return (
     <ClipShadow mode="hero" contStyle={{ maxWidth: "none", padding: 0, margin: 0, }}>
         <div className="row align-items-center  w-100">

@@ -44,7 +44,6 @@ export default function homeRender(slice) {
         return <SectionStandard data={projectsData} key={slice.id} shadow={slice.primary.bottom_shadow} button projects aTop shadow/>
 
     } else if (type === "PrismicHomepageBodyContact") {
-        console.log("contact");
         const contactData = { 
             title: slice.primary.contact_title.text,
             body: slice.primary.contact_body.html,
