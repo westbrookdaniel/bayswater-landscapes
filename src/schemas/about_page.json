@@ -1,0 +1,180 @@
+{
+  "Main" : {
+    "hero_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "Hero Title"
+      }
+    },
+    "hero_body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Hero Body"
+      }
+    },
+    "hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Hero Image"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "what_we_do" : [ ],
+          "our_projects" : [ ],
+          "contact" : [ ]
+        },
+        "choices" : {
+          "what_we_do" : {
+            "type" : "Slice",
+            "fieldset" : "What We Do",
+            "description" : "Standard Section",
+            "icon" : "business_center",
+            "display" : "list",
+            "non-repeat" : {
+              "shadow_bottom" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "Off",
+                  "placeholder_true" : "On",
+                  "default_value" : false,
+                  "label" : "Shadow Bottom"
+                }
+              },
+              "what_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "What Title"
+                }
+              },
+              "what_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "What Body"
+                }
+              },
+              "what_feature_1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "What Feature 1"
+                }
+              },
+              "what_feature_1_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "What Feature 1 Body"
+                }
+              },
+              "what_feature_2" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "What Feature 2"
+                }
+              },
+              "what_feature_2_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "What Feature 2 Body"
+                }
+              },
+              "what_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "What Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "our_projects" : {
+            "type" : "Slice",
+            "fieldset" : "Our Projects",
+            "description" : "Large Section",
+            "icon" : "burst_mode",
+            "display" : "list",
+            "non-repeat" : {
+              "projects_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Projects Title"
+                }
+              },
+              "projects_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Projects Body"
+                }
+              },
+              "projects_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Projects Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "contact" : {
+            "type" : "Slice",
+            "fieldset" : "Contact",
+            "description" : "Standard Section",
+            "icon" : "call",
+            "display" : "list",
+            "non-repeat" : {
+              "shadow_bottom" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "Off",
+                  "placeholder_true" : "On",
+                  "default_value" : false,
+                  "label" : "Shadow Bottom"
+                }
+              },
+              "contact_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Contact Title"
+                }
+              },
+              "contact_body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Contact Body"
+                }
+              },
+              "contact_button" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Contact Button"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

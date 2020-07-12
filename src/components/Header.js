@@ -1,4 +1,6 @@
 import React from "react"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default function Header({ data }) {
   return (
@@ -6,13 +8,13 @@ export default function Header({ data }) {
 
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
-          <a className="navbar-brand" href="#">
+          <AniLink fade className="navbar-brand" to="/" color="white">
             <img
               src="./imgs/logo.png"
               height="30"
               alt={data.title}
             />
-          </a>
+          </AniLink>
 
           <button
             className="navbar-toggler"
@@ -29,9 +31,9 @@ export default function Header({ data }) {
           <div className="collapse navbar-collapse" id="navbarNav3">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <AniLink fade className="nav-link" to="/about" color="white">
                   About
-                </a>
+                </AniLink>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">

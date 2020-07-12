@@ -7,7 +7,7 @@ import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import homeRender from "../components/util/homeRender"
 
-const Home = ({ data }) => {
+const About = ({ data }) => {
 
   const siteData = data.site.siteMetadata
   const homeData = data.prismicHomepage.data;
@@ -26,15 +26,15 @@ const Home = ({ data }) => {
   return (
     <div>
       <Helmet>
-        <title>{siteData.title}</title>
+        <title>About | {siteData.title}</title>
       </Helmet>
 
       <Header data={siteData} />
       <Hero data={heroData} button />
 
-      {content.map(slice => {
+      {/* {content.map(slice => {
         return homeRender(slice)
-      })}
+      })} */}
 
       <Footer data={siteData} />
 
@@ -43,7 +43,7 @@ const Home = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-query HomeQuery {
+query AboutQuery {
   prismicHomepage {
     id
     data {
@@ -146,4 +146,4 @@ query HomeQuery {
 
 `
 
-export default Home
+export default About
