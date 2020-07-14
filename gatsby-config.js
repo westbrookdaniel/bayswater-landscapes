@@ -4,7 +4,6 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-prismic`,
       options: {
