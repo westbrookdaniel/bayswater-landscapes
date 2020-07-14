@@ -10023,23 +10023,22 @@ p {
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-slide.active {
-  opacity: 1;
+.slick-slider .slick-prev {
+  display: none;
 }
 
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 0.5s;
+.slick-slider .slick-next {
+  display: none;
 }
 
-.carousel-slider {
+.slick-slider .slick-dots li button::before {
+  font-size: 10px;
+}
+
+.slick-slider .slick-dots {
   position: relative;
-  height: fit-content;
+  bottom: unset;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=global.css.map */

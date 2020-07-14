@@ -99,6 +99,8 @@ p {
   color: $text-muted;
 }
 
+// Carousel Slide
+
 .carousel-slide-grid {
   padding: 2em 2em 2em 0;
   display: grid;
@@ -132,21 +134,19 @@ p {
   }
 }
 
-// Custom Carousel
-.carousel-slide.active {
-  // display: block;
-  opacity: 1;
+// Carousel Fix
+
+.slick-slider .slick-prev {
+  display: none;
 }
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 0.5s;
+.slick-slider .slick-next {
+  display: none;
 }
-.carousel-slider {
+.slick-slider .slick-dots li button::before {
+  font-size: 10px;
+}
+.slick-slider .slick-dots {
   position: relative;
-  height: fit-content;
+  bottom: unset;
+  margin-bottom: 1em;
 }

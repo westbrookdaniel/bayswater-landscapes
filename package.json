@@ -27,7 +27,9 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
-    "sass": "^1.26.9"
+    "react-slick": "^0.26.1",
+    "sass": "^1.26.9",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

@@ -11,7 +11,10 @@ const About = ({ data }) => {
 
   const siteData = data.site.siteMetadata
   const homeData = data.prismicHomepage.data;
+<<<<<<< HEAD
   const content = homeData.body;  
+=======
+>>>>>>> imrpved-page-trans
 
   const heroData = {
     image: {
@@ -26,16 +29,24 @@ const About = ({ data }) => {
   return (
     <div>
       <Helmet>
+<<<<<<< HEAD
         <title>About | {siteData.title}</title>
+=======
+        <meta charSet="utf-8" />
+        <title>{siteData.title}</title>
+>>>>>>> imrpved-page-trans
       </Helmet>
 
       <Header data={siteData} />
       <Hero data={heroData} button />
 
+<<<<<<< HEAD
       {/* {content.map(slice => {
         return homeRender(slice)
       })} */}
 
+=======
+>>>>>>> imrpved-page-trans
       <Footer data={siteData} />
 
     </div>

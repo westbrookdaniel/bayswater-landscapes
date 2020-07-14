@@ -1,20 +1,14 @@
 import React from "react"
-// import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby"
 
 export default function Header({ data }) {
   return (
     <header>
-
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
-          <AniLink fade className="navbar-brand" to="/" color="white">
-            <img
-              src="./imgs/logo.png"
-              height="30"
-              alt={data.title}
-            />
-          </AniLink>
+          <Link className="navbar-brand" to="/">
+            <img src="./imgs/logo.png" height="30" alt={data.title} />
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -31,9 +25,9 @@ export default function Header({ data }) {
           <div className="collapse navbar-collapse" id="navbarNav3">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <AniLink fade className="nav-link" to="/about" color="white">
+                <Link className="nav-link" to="/about">
                   About
-                </AniLink>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -47,10 +41,7 @@ export default function Header({ data }) {
               </li>
             </ul>
 
-            <a
-              className="btn btn-outline-secondary ml-md-3"
-              href="#"
-            >
+            <a className="btn btn-outline-secondary ml-md-3" href="#">
               Contact
             </a>
           </div>
