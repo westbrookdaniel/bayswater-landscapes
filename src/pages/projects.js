@@ -7,7 +7,7 @@ import Footer from "../components/Footer"
 import SectionStandard from "../components/SectionStandard"
 import allprojectsRender from "../components/util/allprojectsRender"
 
-const About = ({ data }) => {
+const Projects = ({ data }) => {
 
   const siteData = data.site.siteMetadata
   const pageData = data.prismicAllprojectspage.data;
@@ -99,51 +99,4 @@ query AllProjectsQuery {
 
 `
 
-export default About
-
-
-
-// query GetAllProjectQuery {
-//   allPrismicProject {
-//     edges {
-//       node {
-//         data {
-//           body {
-//             ... on PrismicProjectBodyBeforeandafter {
-//               primary {
-//                 after_image {
-//                   url
-//                   alt
-//                 }
-//                 before_image {
-//                   url
-//                   alt
-//                 }
-//               }
-//               id
-//             }
-//             ... on PrismicProjectBodyGallery {
-//               id
-//               items {
-//                 image {
-//                   alt
-//                   url
-//                 }
-//               }
-//             }
-//           }
-//           title {
-//             text
-//           }
-//           featured_image {
-//             alt
-//             url
-//           }
-//           description {
-//             html
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+export default Projects
