@@ -4,23 +4,22 @@ import { Helmet } from "react-helmet"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Hero from "../components/Hero"
-import homeRender from "../components/util/homeRender"
+import SectionStandard from "../components/SectionStandard"
+import aboutRender from "../components/util/aboutRender"
 
 const About = ({ data }) => {
 
   const siteData = data.site.siteMetadata
-  const homeData = data.prismicHomepage.data;
-  const content = homeData.body;  
+  const pageData = data.prismicAboutpage.data;
+  const content = pageData.body;  
 
   const heroData = {
     image: {
-      src: homeData.hero_image.url,
-      alt: homeData.hero_image.alt
+      src: pageData.hero_image.url,
+      alt: pageData.hero_image.alt
     },
-    body: homeData.hero_body.html,
-    title: homeData.hero_title.text,
-    button: homeData.hero_button.text
+    body: pageData.hero_body.html,
+    title: pageData.hero_title.text,
   }
 
   return (
@@ -30,11 +29,11 @@ const About = ({ data }) => {
       </Helmet>
 
       <Header data={siteData} />
-      <Hero data={heroData} button />
+      <SectionStandard data={heroData} shadow={true} noP/>
 
-      {/* {content.map(slice => {
-        return homeRender(slice)
-      })} */}
+      {content.map(slice => {
+        return aboutRender(slice)
+      })}
 
       <Footer data={siteData} />
 
@@ -44,49 +43,32 @@ const About = ({ data }) => {
 
 export const pageQuery = graphql`
 query AboutQuery {
-  prismicHomepage {
-    id
+  prismicAboutpage {
     data {
+      hero_title {
+        text
+      }
+      hero_image {
+        alt
+        url
+      }
+      hero_body {
+        html
+      }
       body {
-        ... on PrismicHomepageBodyAbout {
-          primary {
-            about_title {
-              text
-            }
-            bottom_shadow
-            about_image {
-              alt
-              url
-            }
-            about_feature_2_body {
-              text
-            }
-            about_feature_2 {
-              text
-            }
-            about_feature_1_body {
-              text
-            }
-            about_feature_1 {
-              text
-            }
-            about_body {
-              html
-            }
-          }
-          id
-        }
-        ... on PrismicHomepageBodyContact {
+        __typename
+        ... on PrismicAboutpageBodyContact {
           id
           primary {
+            shadow_bottom
             contact_title {
-              text
-            }
-            contact_button {
               text
             }
             contact_body {
               html
+            }
+            contact_button {
+              text
             }
             contact_image {
               alt
@@ -94,7 +76,35 @@ query AboutQuery {
             }
           }
         }
-        ... on PrismicHomepageBodyProjects {
+        ... on PrismicAboutpageBodyWhatwedo {
+          id
+          primary {
+            shadow_bottom
+            what_title {
+              text
+            }
+            what_body {
+              html
+            }
+            what_feature_1 {
+              text
+            }
+            what_feature_1_body {
+              text
+            }
+            what_feature_2 {
+              text
+            }
+            what_feature_2_body {
+              text
+            }
+            what_image {
+              alt
+              url
+            }
+          }
+        }
+        ... on PrismicAboutpageBodyOurprojects {
           id
           primary {
             projects_title {
@@ -103,37 +113,12 @@ query AboutQuery {
             projects_body {
               html
             }
-            bottom_shadow
-          }
-        }
-        ... on PrismicHomepageBodyServices {
-          id
-          primary {
-            services_title {
-              text
-            }
-            services_body {
-              html
-            }
-            services_image {
+            projects_image {
               alt
               url
             }
           }
         }
-      }
-      hero_title {
-        text
-      }
-      hero_image {
-        url
-        alt
-      }
-      hero_button {
-        text
-      }
-      hero_body {
-        html
       }
     }
   }

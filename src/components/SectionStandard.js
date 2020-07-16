@@ -6,6 +6,10 @@ import ReactHtmlParser from "react-html-parser"
 
 
 const NormalInner = ({features, button, data}) => {
+  let buttonText = 'Download'
+  if (typeof button === 'string') {
+    buttonText = button
+  }
   return (
     <>
       { features ? (
@@ -27,7 +31,7 @@ const NormalInner = ({features, button, data}) => {
     
       { button ? (
         <a href="#">
-          <button className="btn btn-primary mt-4">Download</button>
+          <button className="btn btn-primary mt-4">{buttonText}</button>
         </a>
       ) : null }
     </>
@@ -69,7 +73,7 @@ const ContactInner = () => {
 }  
 
 
-const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText}) => {  
+const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText, noP}) => {  
 
   let colStyle = "col-12 col-lg-6 col-xl-5"
   let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
@@ -78,9 +82,9 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
     colStyle2 = "col-12 col-md-8 col-lg-6 col-xl-5 m-auto ml-lg-0 mr-lg-auto"
   }
 
-  let alignStyle = "row align-items-center my-5"
+  let alignStyle = "row align-items-center my-5 "
   if (aTop) {
-    alignStyle = "row align-items-top mt-5"
+    alignStyle = "row align-items-top mt-5 "
   }
 
   let textAlign = ""
@@ -88,9 +92,14 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
     textAlign = "text-center"
   }
 
+  let pClass = 'py-5'
+  if (noP) {
+    pClass = ''
+  }
+
   return (
     <ClipShadow disable={!shadow}>
-      <div className={alignStyle}>
+      <div className={alignStyle + pClass}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
           {ReactHtmlParser(data.body)}

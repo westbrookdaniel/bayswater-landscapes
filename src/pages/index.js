@@ -10,17 +10,17 @@ import homeRender from "../components/util/homeRender"
 const Home = ({ data }) => {
 
   const siteData = data.site.siteMetadata
-  const homeData = data.prismicHomepage.data;
-  const content = homeData.body;  
+  const pageData = data.prismicHomepage.data;
+  const content = pageData.body;  
 
   const heroData = {
     image: {
-      src: homeData.hero_image.url,
-      alt: homeData.hero_image.alt
+      src: pageData.hero_image.url,
+      alt: pageData.hero_image.alt
     },
-    body: homeData.hero_body.html,
-    title: homeData.hero_title.text,
-    button: homeData.hero_button.text
+    body: pageData.hero_body.html,
+    title: pageData.hero_title.text,
+    button: pageData.hero_button.text
   }
 
   return (

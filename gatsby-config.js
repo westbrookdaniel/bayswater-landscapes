@@ -12,6 +12,7 @@ module.exports = {
         linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
         schemas: {
           homepage: require("./src/schemas/homepage.json"),
+          aboutpage: require("./src/schemas/aboutpage.json"),
         },
       },
     },
