@@ -13,6 +13,7 @@ module.exports = {
         schemas: {
           homepage: require("./src/schemas/homepage.json"),
           aboutpage: require("./src/schemas/aboutpage.json"),
+          allprojectspage: require("./src/schemas/allprojectspage.json"),
         },
       },
     },

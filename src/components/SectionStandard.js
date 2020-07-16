@@ -73,7 +73,7 @@ const ContactInner = () => {
 }  
 
 
-const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText, noP}) => {  
+const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText, noP, noImage}) => {  
 
   let colStyle = "col-12 col-lg-6 col-xl-5"
   let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
@@ -107,11 +107,13 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
         </div>
 
         <div className={colStyle2}>
-          {projects ? (
-            <ProjectsOverview />
-          ) : (
-            <Image alt={data.image.alt} src={data.image.src} />
-          )}
+          {noImage ? null : 
+            projects ? (
+              <ProjectsOverview />
+            ) : (
+              <Image alt={data.image.alt} src={data.image.src} />
+            )
+          }
         </div>
       </div>
     </ClipShadow>
