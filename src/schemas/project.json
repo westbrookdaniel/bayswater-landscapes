@@ -1,0 +1,82 @@
+{
+    "Main" : {
+      "title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label" : "Title"
+        }
+      },
+      "description" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+          "label" : "Description"
+        }
+      },
+      "featured_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Featured Image"
+        }
+      },
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "labels" : {
+            "beforeandafter" : [ ],
+            "gallery" : [ ]
+          },
+          "choices" : {
+            "beforeandafter" : {
+              "type" : "Slice",
+              "fieldset" : "BeforeAndAfter",
+              "description" : "Comparison",
+              "icon" : "compare",
+              "display" : "grid",
+              "non-repeat" : {
+                "before_image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : { },
+                    "thumbnails" : [ ],
+                    "label" : "Before Image"
+                  }
+                },
+                "after_image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : { },
+                    "thumbnails" : [ ],
+                    "label" : "After Image"
+                  }
+                }
+              },
+              "repeat" : { }
+            },
+            "gallery" : {
+              "type" : "Slice",
+              "fieldset" : "Gallery",
+              "description" : "Images",
+              "icon" : "grid_on",
+              "display" : "grid",
+              "non-repeat" : { },
+              "repeat" : {
+                "image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : { },
+                    "thumbnails" : [ ],
+                    "label" : "Image"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

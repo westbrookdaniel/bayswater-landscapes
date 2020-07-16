@@ -41,44 +41,109 @@ const About = ({ data }) => {
 
 export const pageQuery = graphql`
 query AllProjectsQuery {
-    prismicAllprojectspage {
-      data {
-        body {
-          ... on PrismicAllprojectspageBodyContact {
-            id
-            primary {
-              shadow_bottom
-              contact_title {
-                text
-              }
-              contact_body {
-                html
-              }
-              contact_button {
-                text
-              }
-              contact_image {
-                alt
-                url
-              }
+  prismicAllprojectspage {
+    data {
+      body {
+        ... on PrismicAllprojectspageBodyContact {
+          id
+          primary {
+            shadow_bottom
+            contact_title {
+              text
+            }
+            contact_body {
+              html
+            }
+            contact_button {
+              text
+            }
+            contact_image {
+              alt
+              url
             }
           }
         }
-        hero_body {
-          html
-        }
-        hero_title {
-          text
+      }
+      hero_body {
+        html
+      }
+      hero_title {
+        text
+      }
+    }
+  }
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  allPrismicProject {
+    edges {
+      node {
+        data {
+          title {
+            text
+          }
+          featured_image {
+            alt
+            url
+          }
+          description {
+            text
+          }
         }
       }
     }
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }  
+  }
+}  
 
 `
 
 export default About
+
+
+
+// query GetAllProjectQuery {
+//   allPrismicProject {
+//     edges {
+//       node {
+//         data {
+//           body {
+//             ... on PrismicProjectBodyBeforeandafter {
+//               primary {
+//                 after_image {
+//                   url
+//                   alt
+//                 }
+//                 before_image {
+//                   url
+//                   alt
+//                 }
+//               }
+//               id
+//             }
+//             ... on PrismicProjectBodyGallery {
+//               id
+//               items {
+//                 image {
+//                   alt
+//                   url
+//                 }
+//               }
+//             }
+//           }
+//           title {
+//             text
+//           }
+//           featured_image {
+//             alt
+//             url
+//           }
+//           description {
+//             html
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
