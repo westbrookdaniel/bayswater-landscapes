@@ -2,7 +2,7 @@ import React from 'react'
 import SectionStandard from "../SectionStandard"
 import SectionLarge from "../SectionLarge"
 
-export default function homeRender(slice) {
+export default function allprojectsRender(slice) {
 
     const type = slice.__typename
     

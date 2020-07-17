@@ -2,7 +2,7 @@ import React from 'react'
 import SectionStandard from "../SectionStandard"
 import SectionLarge from "../SectionLarge"
 
-export default function homeRender(slice) {
+export default function aboutRender(slice) {
 
     const type = slice.__typename
     
@@ -50,6 +50,4 @@ export default function homeRender(slice) {
     
 }
 
-
-// <SectionStandard data={data.prismicHomepage} key={slice.id} contact centerText right/>
 

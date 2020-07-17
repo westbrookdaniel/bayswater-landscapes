@@ -2,7 +2,7 @@ import React from 'react'
 import BeforeAfter from '../BeforeAfter'
 import Gallery from '../Gallery'
 
-export default function homeRender(slice) {
+export default function projectRender(slice) {
 
     const type = slice.__typename
 

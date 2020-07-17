@@ -15,6 +15,21 @@ const Projects = ({ data }) => {
   const content = pageData.body
   const allProjects = data.allSitePage.edges
 
+  const galleryData = {
+    items: [],
+  }
+  allProjects.forEach(item => {
+      galleryData.items.push({
+          image: {
+              src: item.node.context.pageData.featured_image.url,
+              alt: item.node.context.pageData.featured_image.alt,
+          },
+          title: item.node.context.pageData.title.text,
+          content: `${item.node.context.pageData.description.text.substring(0, 50).trim()}...`,
+          link: item.node.path,
+      })
+  });
+
   const heroData = {
     body: pageData.hero_body.html,
     title: pageData.hero_title.text,
@@ -29,7 +44,7 @@ const Projects = ({ data }) => {
       <Header data={siteData} />
       <SectionStandard data={heroData} shadow={true} noImage/>
 
-      <Gallery data={allProjects} shadow card />
+      <Gallery data={galleryData} shadow card />
 
       {content.map(slice => {
         return allprojectsRender(slice)
@@ -79,7 +94,7 @@ query AllProjectsQuery {
       title
     }
   }
-  allSitePage(filter: {path: {nin: ["/", "/about/", "/dev-404-page/", "/projects/"]}}) {
+  allSitePage(filter: {path: {nin: ["/", "/services/", "/about/", "/dev-404-page/", "/projects/"]}}) {
     edges {
       node {
         path

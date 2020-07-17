@@ -1,0 +1,166 @@
+{
+    "Main" : {
+      "hero_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label" : "Hero Title"
+        }
+      },
+      "hero_body" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+          "label" : "Hero Body"
+        }
+      },
+      "hero_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : { },
+          "thumbnails" : [ ],
+          "label" : "Hero Image"
+        }
+      },
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "labels" : {
+            "whatwedo" : [ ],
+            "services" : [ ]
+          },
+          "choices" : {
+            "contact" : {
+              "type" : "Slice",
+              "fieldset" : "Contact",
+              "description" : "Standard Section",
+              "icon" : "call",
+              "display" : "list",
+              "non-repeat" : {
+                "shadow_bottom" : {
+                  "type" : "Boolean",
+                  "config" : {
+                    "placeholder_false" : "Off",
+                    "placeholder_true" : "On",
+                    "default_value" : false,
+                    "label" : "Shadow Bottom"
+                  }
+                },
+                "contact_title" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                    "label" : "Contact Title"
+                  }
+                },
+                "contact_body" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                    "label" : "Contact Body"
+                  }
+                },
+                "contact_button" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "paragraph",
+                    "label" : "Contact Button"
+                  }
+                },
+                "contact_image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : { },
+                    "thumbnails" : [ ],
+                    "label" : "Contact Image"
+                  }
+                }
+              },
+              "repeat" : { }
+            },
+            "whatwedo" : {
+              "type" : "Slice",
+              "fieldset" : "HowWeWork",
+              "description" : "Standard Section",
+              "icon" : "business_center",
+              "display" : "list",
+              "non-repeat" : {
+                "shadow_bottom" : {
+                  "type" : "Boolean",
+                  "config" : {
+                    "placeholder_false" : "Off",
+                    "placeholder_true" : "On",
+                    "default_value" : false,
+                    "label" : "Shadow Bottom"
+                  }
+                },
+                "how_title" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                    "label" : "How Title"
+                  }
+                },
+                "how_body" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                    "label" : "How Body"
+                  }
+                },
+                "how_button" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                    "label" : "How Button"
+                  }
+                },
+                "how_image" : {
+                  "type" : "Image",
+                  "config" : {
+                    "constraint" : { },
+                    "thumbnails" : [ ],
+                    "label" : "How Image"
+                  }
+                }
+              },
+              "repeat" : { }
+            },
+            "services" : {
+              "type" : "Slice",
+              "fieldset" : "Services",
+              "description" : "Grid Layout",
+              "icon" : "room_service",
+              "display" : "grid",
+              "non-repeat" : {
+                "services_title" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                    "label" : "Services Title"
+                  }
+                }
+              },
+              "repeat" : {
+                "service_name" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                    "label" : "Service Name"
+                  }
+                },
+                "service_description" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                    "label" : "Service Description"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

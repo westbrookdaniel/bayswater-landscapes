@@ -34,7 +34,7 @@ const contactData = {
       </Helmet>
 
       <Header data={siteData} />
-      <SectionStandard data={heroData} shadow={true} noImage />
+      <SectionStandard data={heroData} shadow={true} noImage button='Back To All Projects'/>
 
       <ClipShadow>
         <div className="py-5 my-3">
