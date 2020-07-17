@@ -4,7 +4,8 @@ export default function ClipShadow({
   disable = false,
   children,
   mode = "bottom",
-  contStyle
+  contStyle,
+  sChild = "container px-5",
 }) {
     let modeName;
 
@@ -17,7 +18,6 @@ export default function ClipShadow({
 
     // variable init
     let sDiv = "clipShadow pb-4 " + modeName 
-    let sChild = "container px-5"
 
     // alterations
     if (mode === "both" || mode === "hero") {

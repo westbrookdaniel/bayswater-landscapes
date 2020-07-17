@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Header from "../components/Header"
+import Gallery from "../components/Gallery"
 import Footer from "../components/Footer"
 import SectionStandard from "../components/SectionStandard"
 import allprojectsRender from "../components/util/allprojectsRender"
@@ -10,8 +11,9 @@ import allprojectsRender from "../components/util/allprojectsRender"
 const Projects = ({ data }) => {
 
   const siteData = data.site.siteMetadata
-  const pageData = data.prismicAllprojectspage.data;
-  const content = pageData.body;  
+  const pageData = data.prismicAllprojectspage.data
+  const content = pageData.body
+  const allProjects = data.allSitePage.edges
 
   const heroData = {
     body: pageData.hero_body.html,
@@ -27,7 +29,7 @@ const Projects = ({ data }) => {
       <Header data={siteData} />
       <SectionStandard data={heroData} shadow={true} noImage/>
 
-      {/* All Projects Section */}
+      <Gallery data={allProjects} shadow card />
 
       {content.map(slice => {
         return allprojectsRender(slice)
@@ -52,7 +54,7 @@ query AllProjectsQuery {
               text
             }
             contact_body {
-              html
+              text
             }
             contact_button {
               text
@@ -77,19 +79,22 @@ query AllProjectsQuery {
       title
     }
   }
-  allPrismicProject {
+  allSitePage(filter: {path: {nin: ["/", "/about/", "/dev-404-page/", "/projects/"]}}) {
     edges {
       node {
-        data {
-          title {
-            text
-          }
-          featured_image {
-            alt
-            url
-          }
-          description {
-            text
+        path
+        context {
+          pageData {
+            featured_image {
+              url
+              alt
+            }
+            title {
+              text
+            }
+            description {
+              text
+            }
           }
         }
       }

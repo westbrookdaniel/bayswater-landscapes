@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "./Image"
+import { Link } from "gatsby"
 
 export default function Card(props) {
   let {
@@ -21,9 +22,9 @@ export default function Card(props) {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{content}</p>
         {link && linkText ? (
-          <a href={link} className="text-secondary">
+          <Link to={link} className="text-secondary">
             {linkText}
-          </a>
+          </Link>
         ) : null}
       </div>
     </div>

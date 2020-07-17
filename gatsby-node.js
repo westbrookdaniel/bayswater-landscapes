@@ -47,6 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
                 description {
                 html
+                text
                 }
             }
             }
@@ -56,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
     result.data.allPrismicProject.edges.forEach(edge => {
         createPage({
-            path: `${string_to_slug(edge.node.data.title.text)}`,
+            path: `projects/${string_to_slug(edge.node.data.title.text)}`,
             component: projectTemplate,
             context: {
             pageData: edge.node.data,

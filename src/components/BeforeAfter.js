@@ -1,6 +1,6 @@
 import React from 'react'
-import ClipShadow from './ClipShadow'
-import Image from './Image'
+import ClipShadow from './elements/ClipShadow'
+import Image from './elements/Image'
 
 export default function BeforeAfter({ data, shadow }) {
     return (

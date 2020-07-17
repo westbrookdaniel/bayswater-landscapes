@@ -1,11 +1,11 @@
 import React from 'react'
-import BeforeAfter from '../elements/BeforeAfter'
+import BeforeAfter from '../BeforeAfter'
+import Gallery from '../Gallery'
 
 export default function homeRender(slice) {
 
     const type = slice.__typename
-    console.log(slice);
-    
+
     if (type === "PrismicProjectBodyBeforeandafter") {        
         const beforeafterData = { 
             before: {
@@ -20,22 +20,12 @@ export default function homeRender(slice) {
         
         return <BeforeAfter key={slice.id} data={beforeafterData}/>
         
-    } else if (type === "sdajsl;") {
-    // PrismicProjectBodyGallery     
-        const projectsData = { 
-            title: slice.primary.projects_title.text,
-            body: slice.primary.projects_body.html,
-            image: {
-                alt: slice.primary.projects_image.alt,
-                src: slice.primary.projects_image.url
-            }
+    } else if (type === "PrismicProjectBodyGallery") {
+        const projectsData = {
+            items: slice.items,
         }
-        
-        // return <SectionLarge data={projectsData} key={slice.id} button />
+        return <Gallery data={projectsData} key={slice.id} button />
     }
     
 }
-
-
-// <SectionStandard data={data.prismicHomepage} key={slice.id} contact centerText right/>
 
