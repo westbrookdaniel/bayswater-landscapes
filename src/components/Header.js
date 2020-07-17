@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import 'bootstrap/js/dist/collapse'
 
 export default function Header({ data }) {
   return (
@@ -11,18 +12,18 @@ export default function Header({ data }) {
           </Link>
 
           <button
-            className="navbar-toggler"
+            class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarNav3"
-            aria-controls="navbarNav3"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav3">
+          <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
@@ -40,7 +41,6 @@ export default function Header({ data }) {
                 </Link>
               </li>
             </ul>
-
             <a className="btn btn-outline-secondary ml-md-3" href="#">
               Contact
             </a>

@@ -18,7 +18,7 @@ export default function Carousel({ data }) {
       }
 
     return (
-        <Slider {...settings}>
+        <Slider {...settings} className="overflow-hidden">
             <CarouselSlide data={data} />
             <CarouselSlide data={data} />
             <CarouselSlide data={data} />
