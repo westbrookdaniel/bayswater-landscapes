@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 
 export default function Footer({ data }) {
   var year = new Date().getFullYear()
@@ -9,37 +10,37 @@ export default function Footer({ data }) {
         <div className="row align-items-center">
           <div className="col-12 col-md-8">
             <ul className="nav justify-content-center justify-content-md-start">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+            <li className="nav-item">
+                <Link className="nav-link" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link"to="/services">
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/projects">
                   Projects
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div className="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right">
             <div className="d-flex flex-column flex-md-row">
-              <a href="#" className="my-2 d-flex m-auto">
+              <a href="https://facebook.com/" target="_blank" className="my-2 d-flex m-auto">
                 <img
                   src="static/facebook.svg"
                   srcSet="facebook.svg"

@@ -27,7 +27,9 @@ export default function SectionLarge({ data, button, buttonLink, right }) {
         </div>
         <div className={colStyle2}>
           <h1>{data.title}</h1>
+          <div className="bl-max-width">
           {ReactHtmlParser(data.body)}
+          </div>
           {button && buttonLink ? (
             <Link href={buttonLink}>
               <button className="btn btn-primary mt-4">{typeof button === 'string' ? button : 'See More'}</button>

@@ -16,6 +16,7 @@ module.exports = {
           allprojectspage: require("./src/schemas/allprojectspage.json"),
           project: require("./src/schemas/project.json"),
           servicespage: require("./src/schemas/servicespage.json"),
+          contactpage: require("./src/schemas/contactpage.json"),
         },
       },
     },

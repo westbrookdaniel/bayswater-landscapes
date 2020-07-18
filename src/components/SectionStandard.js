@@ -2,6 +2,7 @@ import React from "react"
 import Image from "./elements/image"
 import ProjectsOverview from "./elements/ProjectsOverview"
 import ClipShadow from "./elements/ClipShadow"
+import Form from "./elements/Form"
 import ReactHtmlParser from "react-html-parser"
 import { Link } from 'gatsby'
 
@@ -14,13 +15,13 @@ const NormalInner = ({features, button, buttonLink, data}) => {
     <>
       { features ? (
         <div className="row pt-4 pt-xl-5">
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-md-6 pl-md-0">
             <h4>
               <strong>{data.f1}</strong>
             </h4>
             <p>{data.f1c}</p>
           </div>
-          <div className="col-12 col-md-5 m-auto pt-3 pt-md-0">
+          <div className="col-12 col-md-6 pr-md-0 m-auto pt-3 pt-md-0">
             <h4>
               <strong>{data.f2}</strong>
             </h4>
@@ -34,40 +35,6 @@ const NormalInner = ({features, button, buttonLink, data}) => {
           <button className="btn btn-primary mt-4">{buttonText}</button>
         </Link>
       ) : null }
-    </>
-  )
-}  
-
-const ContactInner = ({ left }) => {
-  return (
-    <>
-      <form className={left ? 'mt-5 text-left' : 'mt-5 text-center'}>
-        <div className="row" style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: "15px"}}>
-          <div className="col-12 px-0 col-md">
-            <input type="text" className="form-control" placeholder="Name"/>
-          </div>
-          <div className="col-12 px-0 col-md">
-            <input type="text" className="form-control" placeholder="Email"/>
-          </div>
-        </div>
-
-        <div className="row mt-4">
-          <div className="col px-0">
-            <input type="email" className="form-control" placeholder="Subject"/>
-          </div>
-        </div>
-
-        <div className="row mt-4">
-          <div className="col px-0">
-            <textarea className="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
-          </div>
-        </div>
-        <div className="row mt-4">
-          <div className="col px-0">
-            <button type="submit" className="btn btn-secondary">Send Email</button>
-          </div>
-        </div>
-      </form>    
     </>
   )
 }  
@@ -103,8 +70,8 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
           {ReactHtmlParser(data.body)}
-          {contact ? <ContactInner/> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
-          {contactPage ? <ContactInner left /> : null}
+          {contact ? <Form /> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
+          {contactPage ? <Form left/> : null}
         </div>
 
         <div className={colStyle2}>

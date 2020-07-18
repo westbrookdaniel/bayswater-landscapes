@@ -5,14 +5,13 @@ import { Helmet } from "react-helmet"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SectionStandard from "../components/SectionStandard"
-import aboutRender from "../components/util/aboutRender"
 import SectionLarge from "../components/SectionLarge"
 
 const Contact = ({ data }) => {
 
   const siteData = data.site.siteMetadata
-  const pageData = data.prismicAboutpage.data;
-  const content = pageData.body;  
+  const pageData = data.prismicContactpage.data;
+  const content = pageData.body[0];  
 
   const heroData = {
         image: {
@@ -22,12 +21,12 @@ const Contact = ({ data }) => {
         body: pageData.hero_body.html,
         title: pageData.hero_title.text,
     }
-  const whereData = { 
-        title: 'slice.primary .projects_title .text',
-        body: 'slice.primary.projects_body.html',
+  const projectsData = { 
+        title: content.primary.projects_title.text,
+        body: content.primary.projects_body.html,
         image: {
-            alt: 'slice.primary.projects_image.alt',
-            src: 'slice.primary.projects_image.url'
+            alt: content.primary.projects_image.alt,
+            src: content.primary.projects_image.url
         }
     }
 
@@ -39,7 +38,7 @@ const Contact = ({ data }) => {
 
       <Header data={siteData} />
       <SectionStandard data={heroData} contactPage />
-      <SectionLarge data={whereData} />
+      <SectionLarge data={projectsData} button='See All Projects' right buttonLink='/projects' />
 
       <Footer data={siteData} />
 
@@ -49,82 +48,34 @@ const Contact = ({ data }) => {
 
 export const pageQuery = graphql`
 query ContactQuery {
-  prismicAboutpage {
+  prismicContactpage {
     data {
-      hero_title {
-        text
-      }
-      hero_image {
-        alt
-        url
-      }
-      hero_body {
-        html
-      }
       body {
-        __typename
-        ... on PrismicAboutpageBodyContact {
-          id
-          primary {
-            shadow_bottom
-            contact_title {
-              text
-            }
-            contact_body {
-              html
-            }
-            contact_button {
-              text
-            }
-            contact_image {
-              alt
-              url
-            }
-          }
-        }
-        ... on PrismicAboutpageBodyWhatwedo {
-          id
-          primary {
-            shadow_bottom
-            what_title {
-              text
-            }
-            what_body {
-              html
-            }
-            what_feature_1 {
-              text
-            }
-            what_feature_1_body {
-              text
-            }
-            what_feature_2 {
-              text
-            }
-            what_feature_2_body {
-              text
-            }
-            what_image {
-              alt
-              url
-            }
-          }
-        }
-        ... on PrismicAboutpageBodyOurprojects {
+        ... on PrismicContactpageBodyOurprojects {
           id
           primary {
             projects_title {
               text
             }
-            projects_body {
-              html
-            }
             projects_image {
               alt
               url
             }
+            projects_body {
+              html
+            }
           }
         }
+      }
+      hero_title {
+        text
+      }
+      hero_image {
+        url
+        alt
+      }
+      hero_body {
+        html
       }
     }
   }

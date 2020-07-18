@@ -41,7 +41,7 @@ export default function Header({ data }) {
                 </Link>
               </li>
             </ul>
-            <Link className="btn btn-outline-secondary ml-md-3" to="/contact">
+            <Link className="btn btn-outline-secondary mt-2 mt-md-auto ml-md-3" to="/contact">
               Contact
             </Link>
           </div>

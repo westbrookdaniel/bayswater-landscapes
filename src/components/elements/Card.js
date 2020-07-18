@@ -10,10 +10,11 @@ export default function Card(props) {
     content,
     link,
     linkText,
+    style = { width: "18rem" }
   } = props
 
   return (
-    <div className="card border-light text-center" style={{ width: "18rem" }}>
+    <div className="card border-light text-center" style={style}>
       {imageSrc ? (
         <Image cla="card-img-top" src={imageSrc} alt={imageAlt} />
       ) : null}

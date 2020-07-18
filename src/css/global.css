@@ -9954,6 +9954,10 @@ h3 {
   flex-direction: column-reverse;
 }
 
+.bl-max-width {
+  max-width: 500px;
+}
+
 .blcustom-projects-grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -9965,6 +9969,15 @@ h3 {
   .blcustom-projects-grid {
     grid-template-columns: 1fr;
     margin: auto;
+  }
+}
+h1.hero-heading {
+  font-size: 3em;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1.hero-heading {
+    font-size: 2em;
   }
 }
 .blcustom-flow-grid {
