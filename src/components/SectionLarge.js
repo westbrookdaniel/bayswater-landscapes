@@ -2,8 +2,9 @@ import React from "react"
 import Image from "./elements/Image"
 import ClipShadow from './elements/ClipShadow'
 import ReactHtmlParser from "react-html-parser"
+import { Link } from 'gatsby'
 
-export default function SectionLarge({ data, button, right }) {
+export default function SectionLarge({ data, button, buttonLink, right }) {
 
   let colStyle
   let colStyle2
@@ -27,10 +28,10 @@ export default function SectionLarge({ data, button, right }) {
         <div className={colStyle2}>
           <h1>{data.title}</h1>
           {ReactHtmlParser(data.body)}
-          {button ? (
-            <a href="#">
-              <button className="btn btn-primary mt-4">See More</button>
-            </a>
+          {button && buttonLink ? (
+            <Link href={buttonLink}>
+              <button className="btn btn-primary mt-4">{typeof button === 'string' ? button : 'See More'}</button>
+            </Link>
           ) : null}
         </div>
       </div>

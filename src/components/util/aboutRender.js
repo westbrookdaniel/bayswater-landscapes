@@ -21,7 +21,7 @@ export default function aboutRender(slice) {
                 src: slice.primary.what_image.url
             }
         }
-        return <SectionStandard data={whatData} key={slice.id} shadow={slice.primary.shadow_bottom} features button='All Services' right />
+        return <SectionStandard data={whatData} key={slice.id} shadow={slice.primary.shadow_bottom} features button='All Services' buttonLink='/services' right />
         
     } else if (type === "PrismicAboutpageBodyOurprojects") {        
         const projectsData = { 
@@ -33,7 +33,7 @@ export default function aboutRender(slice) {
             }
         }
         
-        return <SectionLarge data={projectsData} key={slice.id} button />
+        return <SectionLarge data={projectsData} key={slice.id} button='See All Projects' buttonLink='/projects'/>
 
     } else if (type === "PrismicAboutpageBodyContact") {
         const contactData = { 

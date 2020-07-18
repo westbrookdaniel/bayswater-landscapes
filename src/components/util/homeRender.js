@@ -33,7 +33,7 @@ export default function homeRender(slice) {
             }
         }
         
-        return <SectionLarge data={servicesData} key={slice.id} shadow={slice.primary.bottom_shadow} button right />
+        return <SectionLarge data={servicesData} key={slice.id} shadow={slice.primary.bottom_shadow} button buttonLink='/services' right />
 
     } else if (type === "PrismicHomepageBodyProjects") {
         const projectsData = { 
@@ -41,7 +41,7 @@ export default function homeRender(slice) {
             body: slice.primary.projects_body.html,
         }
         
-        return <SectionStandard data={projectsData} key={slice.id} shadow={slice.primary.bottom_shadow} button projects aTop shadow/>
+        return <SectionStandard data={projectsData} key={slice.id} shadow={slice.primary.bottom_shadow} button='See All Projects' buttonLink='/projects' projects aTop shadow/>
 
     } else if (type === "PrismicHomepageBodyContact") {
         const contactData = { 

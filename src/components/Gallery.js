@@ -29,7 +29,7 @@ export default function Gallery({ data, shadow, card, textcard }) {
   if (textcard) {
     return (
       <ClipShadow disable={!shadow} sChild="container">
-        <div className="row blcustom-flow-grid mt-5 py-0 py-md-5">
+        <div className="row blcustom-flow-grid mb-5 py-0 py-md-5">
           {data.items.map(item => {
               return (
                 <Card 

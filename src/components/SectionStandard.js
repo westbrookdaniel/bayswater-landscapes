@@ -3,9 +3,9 @@ import Image from "./elements/image"
 import ProjectsOverview from "./elements/ProjectsOverview"
 import ClipShadow from "./elements/ClipShadow"
 import ReactHtmlParser from "react-html-parser"
+import { Link } from 'gatsby'
 
-
-const NormalInner = ({features, button, data}) => {
+const NormalInner = ({features, button, buttonLink, data}) => {
   let buttonText = 'Download'
   if (typeof button === 'string') {
     buttonText = button
@@ -29,10 +29,10 @@ const NormalInner = ({features, button, data}) => {
         </div>
       ) : null }
     
-      { button ? (
-        <a href="#">
+      { button && buttonLink ? (
+        <Link to={buttonLink}>
           <button className="btn btn-primary mt-4">{buttonText}</button>
-        </a>
+        </Link>
       ) : null }
     </>
   )
@@ -73,7 +73,7 @@ const ContactInner = () => {
 }  
 
 
-const SectionStandard = ({ data, features, button, right, projects, aTop, shadow, contact, centerText, noP, noImage}) => {  
+const SectionStandard = ({ data, features, button, buttonLink, right, projects, aTop, shadow, contact, centerText, noP, noImage}) => {  
 
   let colStyle = "col-12 col-lg-6 col-xl-5"
   let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
@@ -103,7 +103,7 @@ const SectionStandard = ({ data, features, button, right, projects, aTop, shadow
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
           {ReactHtmlParser(data.body)}
-          {contact ? <ContactInner/> : <NormalInner data={data.features} features={features} button={button}/> }
+          {contact ? <ContactInner/> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
         </div>
 
         <div className={colStyle2}>

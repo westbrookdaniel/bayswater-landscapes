@@ -17,7 +17,7 @@ export default function servicesRender(slice) {
             },
             button: slice.primary.how_button.text
         }
-        return <SectionStandard data={howData} key={slice.id} shadow={slice.primary.shadow_bottom} button={howData.button} right />
+        return <SectionStandard data={howData} key={slice.id} shadow={slice.primary.shadow_bottom} button={howData.button} buttonLink='/projects' right />
         
     } else if (type === "PrismicServicespageBodyServices") {        
         const servicesData = {
@@ -35,7 +35,7 @@ export default function servicesRender(slice) {
         return (
             <div key={slice.id}>
                 <SectionHeading data={servicesData.title} />
-                <Gallery data={servicesData} button textcard shadow={true}/>
+                <Gallery data={servicesData} textcard shadow={true}/>
             </div>
         )
 

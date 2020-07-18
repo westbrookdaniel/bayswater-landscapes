@@ -7,7 +7,7 @@ export default function Header({ data }) {
     <header>
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" activeClassName="active" to="/">
             <img src="./imgs/logo.png" height="30" alt={data.title} />
           </Link>
 
@@ -20,23 +20,23 @@ export default function Header({ data }) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" activeClassName="active" to="/about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">
+                <Link className="nav-link" activeClassName="active" to="/services">
                   Services
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">
+                <Link className="nav-link" activeClassName="active" to="/projects">
                   Projects
                 </Link>
               </li>
