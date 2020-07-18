@@ -38,10 +38,10 @@ const NormalInner = ({features, button, buttonLink, data}) => {
   )
 }  
 
-const ContactInner = () => {
+const ContactInner = ({ left }) => {
   return (
     <>
-      <form className="mt-5 text-center">
+      <form className={left ? 'mt-5 text-left' : 'mt-5 text-center'}>
         <div className="row" style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: "15px"}}>
           <div className="col-12 px-0 col-md">
             <input type="text" className="form-control" placeholder="Name"/>
@@ -64,7 +64,7 @@ const ContactInner = () => {
         </div>
         <div className="row mt-4">
           <div className="col px-0">
-            <button type="submit" className="btn btn-secondary">Send</button>
+            <button type="submit" className="btn btn-secondary">Send Email</button>
           </div>
         </div>
       </form>    
@@ -73,10 +73,10 @@ const ContactInner = () => {
 }  
 
 
-const SectionStandard = ({ data, features, button, buttonLink, right, projects, aTop, shadow, contact, centerText, noP, noImage}) => {  
+const SectionStandard = ({ data, features, button, buttonLink, right, projects, aTop, shadow, contact, contactPage, centerText, noP, noImage}) => {  
 
-  let colStyle = "col-12 col-lg-6 col-xl-5"
-  let colStyle2 = "col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
+  let colStyle = "col-12 col-lg-5 "
+  let colStyle2 = "col-12 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
   if (right) {
     colStyle = "col-12 col-lg-6 order-last pt-5 pt-lg-0"
     colStyle2 = "col-12 col-md-8 col-lg-6 col-xl-5 m-auto ml-lg-0 mr-lg-auto"
@@ -104,6 +104,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
           <h1>{data.title}</h1>
           {ReactHtmlParser(data.body)}
           {contact ? <ContactInner/> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
+          {contactPage ? <ContactInner left /> : null}
         </div>
 
         <div className={colStyle2}>
