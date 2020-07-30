@@ -40,7 +40,7 @@ export default function Footer({ data }) {
 
           <div className="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right">
             <div className="d-flex flex-column flex-md-row">
-              <a href="https://facebook.com/" target="_blank" className="my-2 d-flex m-auto">
+              <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="my-2 d-flex m-auto">
                 <img
                   src="static/facebook.svg"
                   srcSet="facebook.svg"

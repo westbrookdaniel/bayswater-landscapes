@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "./Image"
+import BootImage from "./BootImage"
 import { Link } from "gatsby"
 
 export default function Card(props) {
@@ -16,7 +16,7 @@ export default function Card(props) {
   return (
     <div className="card border-light text-center" style={style}>
       {imageSrc ? (
-        <Image cla="card-img-top" src={imageSrc} alt={imageAlt} />
+        <BootImage cla="card-img-top" src={imageSrc} alt={imageAlt} />
       ) : null}
 
       <div className="card-body">

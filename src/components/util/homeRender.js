@@ -41,7 +41,7 @@ export default function homeRender(slice) {
             body: slice.primary.projects_body.html,
         }
         
-        return <SectionStandard data={projectsData} key={slice.id} shadow={slice.primary.bottom_shadow} button='See All Projects' buttonLink='/projects' projects aTop shadow/>
+        return <SectionStandard data={projectsData} key={slice.id} shadow={slice.primary.bottom_shadow} button='See All Projects' buttonLink='/projects' projects aTop/>
 
     } else if (type === "PrismicHomepageBodyContact") {
         const contactData = { 
@@ -58,7 +58,3 @@ export default function homeRender(slice) {
     }
     
 }
-
-
-// <SectionStandard data={data.prismicHomepage} key={slice.id} contact centerText right/>
-

@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "./elements/Image"
+import BootImage from "./elements/BootImage"
 import ClipShadow from './elements/ClipShadow'
 import ReactHtmlParser from "react-html-parser"
 import { Link } from 'gatsby'
@@ -20,7 +20,7 @@ export default function SectionLarge({ data, button, buttonLink, right }) {
     <ClipShadow mode='both' style={{ maxWidth: "none", padding: 0, margin: 0, }}>
       <div className="row align-items-center  w-100">
         <div className={colStyle}>
-          <Image
+          <BootImage
             alt={data.image.alt}
             src={data.image.src}
           />

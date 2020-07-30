@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionStandard from "../SectionStandard"
-import SectionLarge from "../SectionLarge"
 
 export default function allprojectsRender(slice) {
 
@@ -21,7 +20,3 @@ export default function allprojectsRender(slice) {
     }
     
 }
-
-
-// <SectionStandard data={data.prismicHomepage} key={slice.id} contact centerText right/>
-

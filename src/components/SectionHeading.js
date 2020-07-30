@@ -1,7 +1,5 @@
 import React from "react"
 import ClipShadow from "./elements/ClipShadow"
-import Image from "./elements/Image"
-import Card from './elements/Card'
 
 export default function Gallery({ data, shadow = false }) {
 

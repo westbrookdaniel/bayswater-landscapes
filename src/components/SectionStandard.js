@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "./elements/image"
+import BootImage from "./elements/BootImage"
 import ProjectsOverview from "./elements/ProjectsOverview"
 import ClipShadow from "./elements/ClipShadow"
 import Form from "./elements/Form"
@@ -79,7 +79,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
             projects ? (
               <ProjectsOverview />
             ) : (
-              <Image alt={data.image.alt} src={data.image.src} />
+              <BootImage alt={data.image.alt} src={data.image.src} />
             )
           }
         </div>
