@@ -10,6 +10,7 @@ export default function Header({ data }) {
           <Link className="navbar-brand" activeClassName="active" to="/">
             <img src="./imgs/logo.png" height="30" alt={data.title} />
           </Link>
+          {/* TODO: Logo */}
 
           <button
             class="navbar-toggler"
