@@ -14,7 +14,7 @@ export default function Card(props) {
   } = props
 
   return (
-    <div className="card border-light text-center" style={style}>
+    <div className="card text-center" style={style}>
       {imageSrc ? (
         <BootImage cla="card-img-top" src={imageSrc} alt={imageAlt} />
       ) : null}

@@ -162,6 +162,3 @@ query HomeQuery {
 `
 
 export default Home
-
-
-// TODO: Tighten Up Design System
