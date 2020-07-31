@@ -8,9 +8,8 @@ export default function Header({ data }) {
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
           <Link className="navbar-brand" activeClassName="active" to="/">
-            <img src="./imgs/logo.png" height="30" alt={data.title} />
+            <img src="./img/logo.png" height="30" alt={data.title} />
           </Link>
-          {/* TODO: Logo */}
 
           <button
             className="navbar-toggler"

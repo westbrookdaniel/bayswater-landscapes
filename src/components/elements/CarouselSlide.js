@@ -16,5 +16,3 @@ export default function CarouselSlide({ data }) {
       </div>
   )
 }
-
-// TODO: Dynamic Carousel Slide 
