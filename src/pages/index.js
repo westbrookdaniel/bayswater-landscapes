@@ -14,14 +14,23 @@ const Home = ({ data }) => {
   const content = pageData.body;  
 
   const heroData = {
-    image: {
-      src: pageData.hero_image.url,
-      alt: pageData.hero_image.alt
-    },
+    slider: [],
     body: pageData.hero_body.html,
     title: pageData.hero_title.text,
     button: pageData.hero_button.text
   }
+  pageData.hero_slider.forEach(slide => {
+    heroData.slider.push({
+      before: {
+        src: slide.before.url,
+        alt: slide.before.alt
+      },
+      after: {
+        src: slide.after.url,
+        alt: slide.after.alt
+      }
+    })
+  });
 
   return (
     <div>
@@ -125,15 +134,21 @@ query HomeQuery {
       hero_title {
         text
       }
-      hero_image {
-        url
-        alt
-      }
       hero_button {
         text
       }
       hero_body {
         html
+      }
+      hero_slider {
+        after {
+          url
+          alt
+        }
+        before {
+          alt
+          url
+        }
       }
     }
   }

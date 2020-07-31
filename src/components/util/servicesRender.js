@@ -24,7 +24,6 @@ export default function servicesRender(slice) {
             title: slice.primary.services_title.text,
             items: [],
         }
-        console.log(slice);
         slice.items.forEach(item => {
             servicesData.items.push({
                 title: item.service_name.text,

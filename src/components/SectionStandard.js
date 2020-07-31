@@ -46,7 +46,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
   let colStyle2 = "col-12 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
   if (right) {
     colStyle = "col-12 col-lg-6 order-last pt-5 pt-lg-0"
-    colStyle2 = "col-12 col-md-8 col-lg-6 col-xl-5 m-auto ml-lg-0 mr-lg-auto"
+    colStyle2 = "col-12 col-md-8 col-lg-6 m-auto ml-lg-0 mr-lg-auto"
   }
 
   let alignStyle = "row align-items-center my-5 "

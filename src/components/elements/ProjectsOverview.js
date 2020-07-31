@@ -56,8 +56,10 @@ function Wrapper({ data }) {
   return (
     <div className="row blcustom-flow-grid py-0 mb-1 mb-md-5" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))'}}>
       {galleryData.items.map(item => {
+          let i = galleryData.items.indexOf(item)
           return (
             <Card 
+              key={i}
               imageSrc={item.image.src}
               imageAlt={item.image.alt}
               title={item.title}

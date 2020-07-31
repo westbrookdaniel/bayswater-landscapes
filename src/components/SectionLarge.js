@@ -31,7 +31,7 @@ export default function SectionLarge({ data, button, buttonLink, right }) {
           {ReactHtmlParser(data.body)}
           </div>
           {button && buttonLink ? (
-            <Link href={buttonLink}>
+            <Link to={buttonLink}>
               <button className="btn btn-primary mt-4">{typeof button === 'string' ? button : 'See More'}</button>
             </Link>
           ) : null}

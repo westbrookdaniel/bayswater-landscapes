@@ -10,8 +10,10 @@ export default function Gallery({ data, shadow, card, textcard }) {
       <ClipShadow disable={!shadow} sChild="container">
         <div className="row blcustom-flow-grid mt-5 py-0 py-md-5">
           {data.items.map(item => {
+            let i = data.items.indexOf(item)
               return (
                 <Card 
+                  key={i}
                   imageSrc={item.image.src}
                   imageAlt={item.image.alt}
                   title={item.title}
@@ -31,8 +33,10 @@ export default function Gallery({ data, shadow, card, textcard }) {
       <ClipShadow disable={!shadow} sChild="container">
         <div className="row blcustom-flow-grid mb-5 py-0 py-md-5">
           {data.items.map(item => {
+              let i = data.items.indexOf(item)
               return (
                 <Card 
+                  key={i}
                   title={item.title}
                   content={item.content}
                 />
@@ -47,7 +51,8 @@ export default function Gallery({ data, shadow, card, textcard }) {
     <ClipShadow disable={!shadow} sChild="container">
       <div className="row blcustom-flow-grid mt-5">
         {data.items.map(item => {
-            return <BootImage alt={item.image.alt} src={item.image.url} />
+            let i = data.items.indexOf(item)
+            return <BootImage key={i} alt={item.image.alt} src={item.image.url} />
         })}
       </div>
     </ClipShadow>

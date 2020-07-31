@@ -19,9 +19,10 @@ export default function Carousel({ data }) {
 
     return (
         <Slider {...settings} className="overflow-hidden">
-            <CarouselSlide data={data} />
-            <CarouselSlide data={data} />
-            <CarouselSlide data={data} />
+            {data.slider.map(slide => {
+                let i = data.slider.indexOf(slide)
+                return <CarouselSlide data={slide} key={i} />
+            })}
         </Slider>
     )
 }
