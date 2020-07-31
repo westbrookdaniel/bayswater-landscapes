@@ -7,31 +7,29 @@ export default function ClipShadow({
   contStyle,
   sChild = "container px-5",
 }) {
-    let modeName;
 
-    // disable and mode check
+    // disable and mode
+    let modeName;
     if (disable) {
         modeName = ''
     } else {
         modeName = `${mode}Clip`
     }
 
-    // variable init
-    let sDiv = "clipShadow pb-4 " + modeName 
-
-    // alterations
+    // padding swap
+    let pb
     if (mode === "both" || mode === "hero") {
-        sChild = "clipShadowChild"
-        sDiv = "clipShadow " + modeName 
+        sChild = ''
+        pb = ""
+    } else {
+        pb = "pb-4"
     }
 
     return (
-        <section className={sDiv} style={contStyle}>
+        <section className={`clipShadow ${pb} ${modeName}`} style={contStyle}>
             <div className={sChild}>
                 {children}
             </div>
         </section>
     )
 }
-
-// TODO: Improve Shadow
