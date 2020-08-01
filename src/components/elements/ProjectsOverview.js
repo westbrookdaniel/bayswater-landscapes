@@ -2,7 +2,7 @@ import React from "react"
 import Card from "./Card"
 import { StaticQuery, graphql } from "gatsby"
 
-export default function ProjectsOverview() {
+export default function ProjectsOverview(props) {
   return (
     <StaticQuery
     query={graphql`
@@ -30,28 +30,37 @@ export default function ProjectsOverview() {
         }
       }  
     `}
-    render={data => <Wrapper data={data} />}
+    render={data => <Wrapper data={data} {...props} />}
   />
   )
 }
 
-function Wrapper({ data }) {
+function Wrapper({ data, max }) {
   const allProjects = data.allSitePage.edges
 
   const galleryData = {
     items: [],
   }
-  allProjects.forEach(item => {
-      galleryData.items.push({
-          image: {
-              src: item.node.context.pageData.featured_image.url,
-              alt: item.node.context.pageData.featured_image.alt,
-          },
-          title: item.node.context.pageData.title.text,
-          content: `${item.node.context.pageData.description.text.substring(0, 50).trim()}...`,
-          link: item.node.path,
-      })
-  });
+
+  let len = allProjects.length
+  if (max && (len > max)) {
+    len = max;
+  }
+
+  for (let i = 0; i < len; i++) {
+    const item = allProjects[i];
+    console.log(allProjects);
+
+    galleryData.items.push({
+      image: {
+        src: item.node.context.pageData.featured_image.url,
+        alt: item.node.context.pageData.featured_image.alt,
+      },
+        title: item.node.context.pageData.title.text,
+        content: `${item.node.context.pageData.description.text.substring(0, 50).trim()}...`,
+        link: item.node.path,
+    })
+  }
 
   return (
     <div className="row blcustom-flow-grid py-0 mb-1 mb-md-5" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))'}}>

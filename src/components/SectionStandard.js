@@ -77,7 +77,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
         <div className={colStyle2}>
           {noImage ? null : 
             projects ? (
-              <ProjectsOverview />
+              <ProjectsOverview max={4}/>
             ) : (
               <BootImage alt={data.image.alt} src={data.image.src} />
             )

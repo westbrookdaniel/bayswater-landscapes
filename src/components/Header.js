@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import 'bootstrap/js/dist/collapse'
 
 export default function Header({ data }) {
+  // TODO: Logo
   return (
     <header>
       <div className="container">
