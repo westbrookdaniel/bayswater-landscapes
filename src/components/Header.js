@@ -1,15 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import 'bootstrap/js/dist/collapse'
+import logo from '../img/logo.png'
 
 export default function Header({ data }) {
-  // TODO: Logo
   return (
     <header>
       <div className="container">
         <nav className="navbar navbar-light navbar-expand-md">
           <Link className="navbar-brand" activeClassName="active" to="/">
-            <img src="./img/logo.png" height="30" alt={data.title} />
+            <img style={{padding: "3px 0"}} src={logo} height="30" alt={data.title} />
           </Link>
 
           <button
