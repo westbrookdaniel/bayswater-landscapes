@@ -2,9 +2,9 @@ import React from "react"
 import BootImage from "./elements/BootImage"
 import ClipShadow from './elements/ClipShadow'
 import ReactHtmlParser from "react-html-parser"
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 
-export default function SectionLarge({ data, button, buttonLink, right }) {
+export default function SectionLarge({ data, button, buttonLink, right, services }) {
 
   let colStyle
   let colStyle2
@@ -30,6 +30,21 @@ export default function SectionLarge({ data, button, buttonLink, right }) {
           <div className="bl-max-width">
           {ReactHtmlParser(data.body)}
           </div>
+          {services ? (
+            <StaticQuery
+              query={graphql`
+              query {
+                prismicServicespageBodyServices {
+                  items {
+                    service_name {
+                      text
+                    }
+                  }
+                }
+              }`}
+              render={data => <Services data={data} />}
+            />      
+          ) : null}
           {button && buttonLink ? (
             <Link to={buttonLink}>
               <button className="btn btn-primary mt-4">{typeof button === 'string' ? button : 'See More'}</button>
@@ -38,5 +53,16 @@ export default function SectionLarge({ data, button, buttonLink, right }) {
         </div>
       </div>
     </ClipShadow>
+  )
+}
+
+const Services = ({data}) => {
+  return (
+    <div className="row mt-4">
+      {data.prismicServicespageBodyServices.items.map(item => {
+        const i = data.prismicServicespageBodyServices.items.indexOf(item)
+        return <p key={i} className="col-6 col-sm-3">{item.service_name.text}</p>
+      })}
+    </div>
   )
 }

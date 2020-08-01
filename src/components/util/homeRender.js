@@ -32,10 +32,8 @@ export default function homeRender(slice) {
                 src: slice.primary.services_image.url
             }
         }
-
-        // TODO: Services List
         
-        return <SectionLarge data={servicesData} key={slice.id} shadow={slice.primary.bottom_shadow} button buttonLink='/services' right />
+        return <SectionLarge data={servicesData} key={slice.id} shadow={slice.primary.bottom_shadow} button buttonLink='/services' right services />
 
     } else if (type === "PrismicHomepageBodyProjects") {
         const projectsData = { 
