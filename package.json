@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "framer-motion": "^2.3.0",
     "gatsby": "^2.23.10",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-transition-link": "^1.20.2",

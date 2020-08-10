@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import { motion } from 'framer-motion'
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -28,7 +29,11 @@ const contactData = {
 }
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Helmet>
         <title>{heroData.title} | {siteData.title}</title>
       </Helmet>
@@ -48,7 +53,7 @@ const contactData = {
 
       <Footer data={siteData} />
 
-    </div>
+    </motion.div>
   )
 }
 export const pageQuery = graphql`

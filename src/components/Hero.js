@@ -17,9 +17,14 @@ export default function Hero({ data, button }) {
             {ReactHtmlParser(data.body)}
             </div>
             {button ? (
+              <>
               <Link to="/contact">
                 <button className="btn btn-primary mt-4">{data.button}</button>
               </Link>
+              <Link to="/projects">
+                <button className="btn ml-3 btn-outline-secondary mt-4">See All Projects</button>
+              </Link>
+              </>
             ) : null}
           </div>
         </div>
