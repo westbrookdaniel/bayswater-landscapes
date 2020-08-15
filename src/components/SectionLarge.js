@@ -29,7 +29,7 @@ export default function SectionLarge({ data, button, buttonLink, right, services
         <div className={colStyle2}>
           <h1>{data.title}</h1>
           <div className="bl-max-width">
-          {sanitizeHtml(ReactHtmlParser(data.body))}
+          {ReactHtmlParser(sanitizeHtml(data.body))}
           </div>
           {services ? (
             <StaticQuery

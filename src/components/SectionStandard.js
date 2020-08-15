@@ -74,7 +74,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
       <div className={alignStyle + pClass}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
-          {sanitizeHtml(ReactHtmlParser(data.body))}
+          {ReactHtmlParser(sanitizeHtml(data.body))}
           {contact ? <Form /> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
           {contactPage ? <Form left/> : null}
         </div>

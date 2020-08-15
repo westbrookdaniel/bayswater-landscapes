@@ -22,7 +22,7 @@ export default function Hero({ data, button }) {
           <div className="col-12 col-lg-5 ml-md-auto text-left px-5 py-5 mr-md-5 w-100">
             <motion.h1 variants={item} className="hero-heading">{data.title}</motion.h1>
             <motion.div variants={item} className="bl-max-width">
-            {sanitizeHtml(ReactHtmlParser(data.body))}
+            {ReactHtmlParser(sanitizeHtml(data.body))}
             </motion.div>
             {button ? (
               <motion.div variants={item}>
