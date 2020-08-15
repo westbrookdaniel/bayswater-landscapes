@@ -1,4 +1,5 @@
 import React from "react"
+import sanitizeHtml from 'sanitize-html'
 import ReactHtmlParser from "react-html-parser"
 import Carousel from "./elements/Carousel"
 import ClipShadow from './elements/ClipShadow'
@@ -21,7 +22,7 @@ export default function Hero({ data, button }) {
           <div className="col-12 col-lg-5 ml-md-auto text-left px-5 py-5 mr-md-5 w-100">
             <motion.h1 variants={item} className="hero-heading">{data.title}</motion.h1>
             <motion.div variants={item} className="bl-max-width">
-            {ReactHtmlParser(data.body)}
+            {sanitizeHtml(ReactHtmlParser(data.body))}
             </motion.div>
             {button ? (
               <motion.div variants={item}>

@@ -3,6 +3,7 @@ import BootImage from "./elements/BootImage"
 import ProjectsOverview from "./elements/ProjectsOverview"
 import ClipShadow from "./elements/ClipShadow"
 import Form from "./elements/Form"
+import sanitizeHtml from 'sanitize-html'
 import ReactHtmlParser from "react-html-parser"
 import { Link } from 'gatsby'
 
@@ -73,7 +74,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
       <div className={alignStyle + pClass}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>
-          {ReactHtmlParser(data.body)}
+          {sanitizeHtml(ReactHtmlParser(data.body))}
           {contact ? <Form /> : <NormalInner buttonLink={buttonLink} data={data.features} features={features} button={button}/> }
           {contactPage ? <Form left/> : null}
         </div>

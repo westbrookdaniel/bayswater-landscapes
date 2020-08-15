@@ -1,6 +1,7 @@
 import React from "react"
 import BootImage from "./elements/BootImage"
 import ClipShadow from './elements/ClipShadow'
+import sanitizeHtml from 'sanitize-html'
 import ReactHtmlParser from "react-html-parser"
 import { Link, StaticQuery, graphql } from 'gatsby'
 
@@ -28,7 +29,7 @@ export default function SectionLarge({ data, button, buttonLink, right, services
         <div className={colStyle2}>
           <h1>{data.title}</h1>
           <div className="bl-max-width">
-          {ReactHtmlParser(data.body)}
+          {sanitizeHtml(ReactHtmlParser(data.body))}
           </div>
           {services ? (
             <StaticQuery
