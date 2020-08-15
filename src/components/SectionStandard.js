@@ -40,7 +40,11 @@ const NormalInner = ({features, button, buttonLink, data}) => {
 }  
 
 
-const SectionStandard = ({ data, features, button, buttonLink, right, projects, aTop, shadow, contact, contactPage, centerText, noP, noImage}) => {  
+const SectionStandard = ({ data, features, button, buttonLink, right, projects, aTop, shadow, contact, contactPage, centerText, noP, noImage, custStyle}) => {  
+
+  if (!custStyle) {
+    custStyle = null
+  }
 
   let colStyle = "col-12 col-lg-5 "
   let colStyle2 = "col-12 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0"
@@ -65,7 +69,7 @@ const SectionStandard = ({ data, features, button, buttonLink, right, projects, 
   }
 
   return (
-    <ClipShadow disable={!shadow}>
+    <ClipShadow disable={!shadow} contStyle={custStyle}>
       <div className={alignStyle + pClass}>
         <div className={colStyle + ' ' + textAlign}>
           <h1>{data.title}</h1>

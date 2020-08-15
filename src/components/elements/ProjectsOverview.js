@@ -6,8 +6,8 @@ export default function ProjectsOverview(props) {
   return (
     <StaticQuery
     query={graphql`
-      query {
-        allSitePage(filter: {path: {nin: ["/", "/contact/", "/services/", "/about/", "/dev-404-page/", "/projects/"]}}) {
+      query Projects {
+        allSitePage(filter: {path: {nin: ["/", "/contact/", "/services/", "/about/", "/dev-404-page/", "/404/", "/404.html", "/projects/"]}}) {
           edges {
             node {
               path
@@ -49,7 +49,6 @@ function Wrapper({ data, max }) {
 
   for (let i = 0; i < len; i++) {
     const item = allProjects[i];
-    console.log(allProjects);
 
     galleryData.items.push({
       image: {
@@ -60,6 +59,7 @@ function Wrapper({ data, max }) {
         content: `${item.node.context.pageData.description.text.substring(0, 50).trim()}...`,
         link: item.node.path,
     })
+
   }
 
   return (

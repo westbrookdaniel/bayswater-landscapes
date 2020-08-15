@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 export default function Footer({ data }) {
   var year = new Date().getFullYear()
@@ -10,7 +10,7 @@ export default function Footer({ data }) {
         <div className="row align-items-center">
           <div className="col-12 col-md-8">
             <ul className="nav justify-content-center justify-content-md-start">
-            <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
                 </Link>
@@ -21,7 +21,7 @@ export default function Footer({ data }) {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link"to="/services">
+                <Link className="nav-link" to="/services">
                   Services
                 </Link>
               </li>
@@ -39,18 +39,38 @@ export default function Footer({ data }) {
           </div>
 
           <div className="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right">
-            <div className="d-flex flex-column flex-md-row">
-              <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="my-2 d-flex m-auto">
-                <img
-                  src="static/facebook.svg"
-                  srcSet="facebook.svg"
-                  alt="facebook"
-                  className="fbIcon"
-                ></img>
-              </a>
+            <div className="d-flex flex-column flex-xl-row">
+              <div className="row justify-content-center justify-content-md-end py-2 mt-1">
+                <a
+                  href="https://www.facebook.com/bayswaterlandscapes/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="d-flex"
+                >
+                  <img
+                    src="static/facebook.svg"
+                    srcSet="facebook.svg"
+                    alt="facebook"
+                    className="fbIcon"
+                  ></img>
+                </a>
+                <a
+                  href="https://www.instagram.com/bayswaterlandscapes/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="d-flex"
+                >
+                  <img
+                    src="static/instagram.svg"
+                    srcSet="instagram.svg"
+                    alt="instagram"
+                    className="instIcon"
+                  ></img>
+                </a>
+              </div>
 
               <p className="my-3 my-md-2 ml-4 text-muted">
-                Copyright ©{year} {data.title}
+                ©{year} {data.title}
               </p>
             </div>
           </div>

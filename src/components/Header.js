@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import logo from '../img/logo.png'
-typeof window !== `undefined` ? require("bootstrap/js/dist/collapse.js") : null
+if (typeof window !== `undefined`) {
+  require("bootstrap/js/dist/collapse.js")
+}
 
 export default function Header({ data }) {
   return (

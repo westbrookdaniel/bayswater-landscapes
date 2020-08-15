@@ -94,7 +94,7 @@ query AllProjectsQuery {
       title
     }
   }
-  allSitePage(filter: {path: {nin: ["/", "/contact/", "/services/", "/about/", "/dev-404-page/", "/projects/"]}}) {
+  allSitePage(filter: {path: {nin: ["/", "/contact/", "/services/", "/about/", "/dev-404-page/", "/404/", "/404.html", "/projects/"]}}) {
     edges {
       node {
         path
