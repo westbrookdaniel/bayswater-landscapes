@@ -29,7 +29,7 @@
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
     "react-slick": "^0.26.1",
-    "sanitize-html": "^1.27.3",
+    "sanitize-html": "^2.3.2",
     "sass": "^1.26.9",
     "slick-carousel": "^1.8.1"
   },
